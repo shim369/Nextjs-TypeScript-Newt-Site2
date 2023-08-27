@@ -2,6 +2,6 @@
 
 export const Footer = () => {
   return (
-    <footer></footer>
+    <footer className={'footer'}>@2023 Create Next App</footer>
   )
 }

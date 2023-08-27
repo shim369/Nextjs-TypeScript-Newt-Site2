@@ -13,5 +13,19 @@
     a {
         padding: 10px;
         display: block;
+        text-transform: uppercase;
     }
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
