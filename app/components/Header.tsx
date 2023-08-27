@@ -1,5 +1,4 @@
 import Link from 'next/link'
-// import './styles/css/style.css'
 
 export const Header = () => {
   return (
