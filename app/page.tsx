@@ -1,9 +1,15 @@
 // import Image from 'next/image'
-import styles from './page.module.css'
+import { Header } from './components/Header'
+import { Footer } from './components/Footer'
+import './styles/style.scss'
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-    </main>
+    <>
+      <Header />
+      <main className={'main'}>
+      </main>
+      <Footer />
+    </>
   )
 }
