@@ -6,11 +6,9 @@ export default function Home() {
   return (
     <>
       <section id="home" className={'main-visual'}>
-        <div className={'container'}>
           <div className={'main-visual-inner'}>
             <h1>テクノロジーでビジネスを加速</h1>
           </div>
-        </div>
       </section>
       <main className={'main'}>
         <section id="about">

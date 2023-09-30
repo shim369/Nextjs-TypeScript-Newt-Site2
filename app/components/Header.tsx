@@ -3,7 +3,6 @@ import Link from 'next/link'
 export const Header = () => {
   return (
     <header className={'header'}>
-      <div className={'container'}>
         <div className={'header-inner'}>
             <a href="/" className={'logo'}>Logo</a>
             <nav className={'nav'}>
@@ -14,7 +13,6 @@ export const Header = () => {
                 <Link href="/contact">contact</Link>
             </nav>
         </div>
-      </div>
     </header>
   )
 }
