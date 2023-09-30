@@ -8,7 +8,7 @@ export default function Page() {
   return (
 <section id="faq">
   <div className={'container'}>
-  <h2>FAQ（よくある質問）</h2>
+  <h2>FAQ</h2>
   <dl>
     <dt>Q1: サービスの料金はどのように決まりますか？</dt>
     <dd>A1: 料金はプロジェクトの規模、要件、使用する技術によって異なります。基本プランは¥300,000からとなっていますが、具体的な見積もりはプロジェクトの詳細をお知らせいただいた上でお出しします。</dd>

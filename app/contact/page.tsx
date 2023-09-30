@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <section id="contact">
       <div className={'container'}>
-      <h2>お問い合わせ</h2>
+      <h2>CONTACT</h2>
 
       <h3>お問い合わせフォーム</h3>
       <form action="/submit" method="post">

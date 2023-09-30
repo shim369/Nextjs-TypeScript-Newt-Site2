@@ -8,7 +8,7 @@ export default function Page() {
   return (
     <section id="about">
       <div className={'container'}>
-      <h2>アバウト</h2>
+      <h2>ABOUT</h2>
 
       <h3>ビジョン</h3>
       <p>テクノロジーが日々進化する中で、常に最前線で最高のサービスを提供することを目指しています。私のビジョンは、クライアントが目指す成功をテクノロジーで実現するパートナーであることです。</p>

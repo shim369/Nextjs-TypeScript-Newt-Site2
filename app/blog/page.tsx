@@ -9,7 +9,7 @@ export default function Page() {
   return ( 
     <section id="blog">
     <div className={'container'}>
-      <h2>ブログ/記事</h2>
+      <h2>BLOG</h2>
       
       <h3>カテゴリー</h3>
       
