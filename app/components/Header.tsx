@@ -15,7 +15,7 @@ export const Header = () => {
         </div>
         <ul className={'sns-link'}>
           <li><Link href="#"><i className="fa fa-facebook"></i></Link></li>
-          <li><Link href="#"><i className="fa fa-twitter"></i></Link></li>
+          <li><Link href="#"><i className="fa fa-instagram"></i></Link></li>
           <li><Link href="#"><i className="fa fa-linkedin"></i></Link></li>
         </ul>
     </header>
