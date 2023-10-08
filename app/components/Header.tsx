@@ -15,9 +15,8 @@ export const Header = () => {
             </nav>
         </div>
         <ul className={'sns-link'}>
-          <li><Link href="#"><i className="fa fa-facebook"></i></Link></li>
-          <li><Link href="#"><i className="fa fa-instagram"></i></Link></li>
-          <li><Link href="#"><i className="fa fa-linkedin"></i></Link></li>
+          <li><Link href="https://github.com/shim369" target="_blank"><i className="fa fa-github"></i></Link></li>
+          <li><Link href="https://sohtani.pythonanywhere.com/" target="_blank"><i className="fa fa-pencil"></i></Link></li>
         </ul>
     </header>
   )

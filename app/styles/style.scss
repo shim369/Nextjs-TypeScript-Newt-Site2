@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;900&family=Tulpen+One&display=swap');
+
 :root {
     --max-width: 1100px;
     --border-radius: 3rem;
@@ -17,10 +19,15 @@ body {
     overflow-x: hidden;
     font-size: 16px;
     background: #000;
+    font-family: 'Tulpen One', cursive;
 }
   
 a {
     text-decoration: none;
+}
+
+p,li{
+    font-family: 'Lato', sans-serif;
 }
 
 ul {
@@ -64,6 +71,9 @@ ul {
         li {
             margin-top: 1rem;
             text-align: center;
+        }
+        i {
+            font-size: 1.3rem;
         }
     }
 }
