@@ -1,4 +1,3 @@
-// import Image from 'next/image'
 import Link from 'next/link'
 import './styles/style.scss'
 
@@ -10,7 +9,6 @@ export default function Home() {
             <h1>Increasing Business Velocity <br />through Technology</h1>
           </div>
       </section>
-      <main className={'main'}>
         <section id="about">
           <div className={'container'}>
             <h2>ABOUT</h2>
@@ -23,7 +21,7 @@ export default function Home() {
           <div className={'container'}>
             <h2>SERVICE</h2>
             <p>HTML, CSS, JavaScript, Pythonなどを駆使して、あなたのビジネスに最適なウェブソリューションを提供します。オンラインショップから企業サイトまで、多様なニーズに対応します。</p>
-            <Link href="/service">詳しくはこちら</Link>
+            <Link href="/service" className={'link-btn'}>詳しくはこちら</Link>
           </div>
         </section>
 
@@ -50,7 +48,6 @@ export default function Home() {
             <Link href="/contact" className={'link-btn'}>詳しくはこちら</Link>
           </div>
         </section>
-      </main>
     </>
   )
 }

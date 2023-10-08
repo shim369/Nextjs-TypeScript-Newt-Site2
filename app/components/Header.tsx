@@ -1,11 +1,12 @@
 import Link from 'next/link'
+import 'font-awesome/css/font-awesome.min.css';
 
 export const Header = () => {
   return (
     <header className={'header'}>
         <div className={'header-inner'}>
             <a href="/" className={'logo'}>NEXT TECH</a>
-            <nav className={'nav'}>
+            <nav>
                 <Link href="/about">ABOUT</Link>
                 <Link href="/service">SERVICE</Link>
                 <Link href="/blog">BLOG</Link>
