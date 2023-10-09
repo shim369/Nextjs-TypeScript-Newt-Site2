@@ -52,12 +52,12 @@ export const Header = () => {
       </div>
     </div>
     <div id="sp-nav">
-      <div className={"sp-nav-inner"}>
-        <div className={"sp-nav-links"}>
-            <p className={"logo"}>
+      <div className={'sp-nav-inner'}>
+        <div className={'sp-nav-links'}>
+            <p className={'logo'}>
               <Link href="/">Next Tech</Link>
             </p>
-            <nav className="sp-nav"></nav>
+            <nav className={'sp-nav'}></nav>
         </div>
       </div>
     </div>

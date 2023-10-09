@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;900&family=Tulpen+One&display=swap');
 
-:root {
-    --max-width: 1100px;
-    --border-radius: 3rem;
-}
-
 * {
     box-sizing: border-box;
     padding: 0;
@@ -56,7 +51,7 @@ ul {
         a {
             display: block;
             text-transform: uppercase;
-            border-radius: var(--border-radius);
+            border-radius: 1.8rem;
             padding: .5rem 1rem;
             margin: 0 .5rem;
             font-size: 1.4rem;
@@ -73,6 +68,7 @@ ul {
         position: fixed;
         bottom: 2rem;
         right: 1rem;
+        z-index: 999;
         li {
             margin-top: 1rem;
             text-align: center;
@@ -163,7 +159,7 @@ ul {
         color: #000;
         background: #fff;
         padding: .5rem 1rem;
-        border-radius: var(--border-radius);
+        border-radius: 1.8rem;
         &:hover {
             background: #000;
             color: #fff;
@@ -171,12 +167,22 @@ ul {
     }
 }
 
-.footer {
+.contents-box {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
+    @media (max-width: 639px) {
+        flex-direction: column;
+    }
+    .contets-item {
+        width: 50%;
+        height: 50vh;
+        padding: 2rem 2%;
+        @media (max-width: 639px) {
+            width: 100%;
+            height: auto;
+        }
+    }
 }
 
 #nav-toggle {
@@ -193,12 +199,6 @@ ul {
     -webkit-transition: 0.4s;
     transition: 0.4s;
     border-radius: 50%;
-    &::before {
-        @media (max-width: 896px) {
-            left: -4px;
-            top: -9px;
-        }
-    }
     div {
         position: relative;
     }
@@ -446,4 +446,12 @@ ul {
                     animation: nav-anime-opacity 0.6s ease 0.4s forwards;
         }
     }
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 1rem;
 }
