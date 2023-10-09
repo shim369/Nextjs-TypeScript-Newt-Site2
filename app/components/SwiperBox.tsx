@@ -33,6 +33,7 @@ const SwiperBox = () => {
                                 width={1920}
                                 height={1280}
                                 alt='Next Tech'
+                                priority={index === 0}
                             />
                         </SwiperSlide>
                     );

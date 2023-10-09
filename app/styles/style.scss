@@ -99,6 +99,7 @@ ul {
             position: absolute;
             z-index: 2;
             font-size: 5rem;
+            text-shadow: rgba(0,0,0,.2) 2px 2px 4px;
 			@media (max-width: 896px) {
                 font-size: 3rem;
 			}
