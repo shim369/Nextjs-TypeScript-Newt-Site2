@@ -1,11 +1,13 @@
 import Link from 'next/link'
 import './styles/style.scss'
+import SwiperBox from './components/SwiperBox'
 
 export default function Home() {
   return (
     <>
       <section id="home" className={'main-visual'}>
           <div className={'main-visual-inner'}>
+            <SwiperBox />
             <h1>Increasing Business Velocity <br />through Technology</h1>
           </div>
       </section>
