@@ -38,24 +38,29 @@ ul {
     position: relative;
     .header-inner {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
         width: 100%;
         padding: 1rem;
         height: 10vh;
     }
     .logo {
-        font-size: 1.5rem;
+        font-size: 2.2rem;
+        margin-right: 3rem;
     }
-    nav {
+    .pc-nav {
         display: flex;
+        @media (max-width: 896px) {
+            display: none;
+        }
         a {
             display: block;
             text-transform: uppercase;
             border-radius: var(--border-radius);
             padding: .5rem 1rem;
             margin: 0 .5rem;
-			@media (max-width: 800px) {
+            font-size: 1.4rem;
+			@media (max-width: 896px) {
                 margin: 0 .3rem;
 			}
             &:hover {
@@ -78,6 +83,10 @@ ul {
     }
 }
 
+.swiper-button-prev, .swiper-button-next {
+    color: #fff !important;
+}
+
 .main-visual {
     width: 100%;
     min-height: 100vh;
@@ -94,9 +103,12 @@ ul {
             position: absolute;
             z-index: 2;
             font-size: 5rem;
-			@media (max-width: 800px) {
+			@media (max-width: 896px) {
                 font-size: 3rem;
 			}
+            @media (max-width: 639px) {
+                font-size: 2.5rem;
+            }
         }
     }
 }
@@ -117,12 +129,15 @@ ul {
     h2 {
         margin-top: 2rem;
         margin-bottom: 2rem;
+        font-size: 3rem;
     }
     h3 {
         margin-bottom: 2rem;
+        font-size: 2rem;
     }
     h4 {
         margin-bottom: 2rem;
+        font-size: 1.3rem;
     }
     p {
         margin-bottom: 2rem;
@@ -162,4 +177,273 @@ ul {
     align-items: center;
     position: relative;
     padding: 1rem;
+}
+
+#nav-toggle {
+    display: block;
+    position: fixed;
+    top: .5rem;
+    right: 1rem;
+    width: 65px;
+    height: 65px;
+    cursor: pointer;
+    z-index: 1000;
+    border: 1px solid #fff;
+    padding: 10px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 50%;
+    &::before {
+        @media (max-width: 896px) {
+            left: -4px;
+            top: -9px;
+        }
+    }
+    div {
+        position: relative;
+    }
+    span {
+        width: 100%;
+        height: 1px;
+        left: 0;
+        display: block;
+        background: #fff;
+        position: absolute;
+        -webkit-transition: top 0.5s ease, -webkit-transform 0.6s ease-in-out;
+        transition: top 0.5s ease, -webkit-transform 0.6s ease-in-out;
+        transition: transform 0.6s ease-in-out, top 0.5s ease;
+        transition: transform 0.6s ease-in-out, top 0.5s ease, -webkit-transform 0.6s ease-in-out;
+        &:nth-child(1) {
+            top: 10px;
+        }
+        &:nth-child(2) {
+            top: 20px;
+            width: 85%;
+        }
+        &:nth-child(3) {
+            top: 30px;
+            width: 70%;
+        }
+        &:hover {
+            span {
+                &:nth-child(1) {
+                    width: 1px;
+                    -webkit-transition: 0.4s;
+                    transition: 0.4s;
+                    width: 70%;
+                }
+                &:nth-child(2) {
+                    width: 1px;
+                    -webkit-transition: 0.4s;
+                    transition: 0.4s;
+                    width: 85%;
+                }
+                &:nth-child(3) {
+                    width: 1px;
+                    -webkit-transition: 0.4s;
+                    transition: 0.4s;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+#sp-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    opacity: 0;
+    -webkit-transition: opacity 0.4s ease, visibility 0.4s ease;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    @media (max-width: 639px) {
+        padding: 40px 20px;
+    }
+    &::before {
+        position: absolute;
+        content: "";
+        width: 110%;
+        height: 0%;
+        top: -100%;
+        right: -3%;
+        background-color: #000;
+        border-radius: 50%;
+        z-index: -1;
+        opacity: 1;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .sp-nav-inner {
+        width: 100%;
+        margin: 0 auto;
+        height: 100%;
+        padding: 100px 50px;
+        position: relative;
+        z-index: 1;
+        opacity: 0;
+        @media (max-width: 896px) {
+            width: 100%;
+        }
+        @media (max-width: 639px) {
+            padding: 40px 20px;
+        }
+    }
+    .sp-nav-links {
+        position: absolute;
+        width: 80%;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translateY(-50%) translateX(-50%);
+                transform: translateY(-50%) translateX(-50%);
+        padding: 100px 0;
+        @media (max-width: 896px) {
+            width: 100%;
+            padding: 100px 50px;
+        }
+        @media (max-width: 639px) {
+            padding: 50px 0;
+        }
+        .logo {
+            text-align: center;
+            font-family: 'Tulpen One', cursive;
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+        .sp-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media (max-width: 639px) {
+                flex-direction: column;
+            }
+            a {
+                font-size: 2rem;
+                margin: 0 .8rem;
+                @media (max-width: 639px) {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+    .dropdown {
+        display: none;
+    }
+}
+
+@-webkit-keyframes nav-anime {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 300%;
+    }
+}
+
+@keyframes nav-anime {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 300%;
+    }
+}
+
+@-webkit-keyframes nav-anime-opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes nav-anime-opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.open {
+    overflow: hidden;
+    #nav-toggle {
+        span {
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+            &:nth-child(1) {
+                top: 20px;
+                -webkit-transform: rotate(45deg);
+                        transform: rotate(45deg);
+                -webkit-transition: 0.4s;
+                transition: 0.4s;
+            }
+            &:nth-child(2) {
+                display: none;
+            }
+            &:nth-child(3) {
+                top: 20px;
+                width: 100%;
+                -webkit-transform: rotate(-45deg);
+                        transform: rotate(-45deg);
+                -webkit-transition: 0.4s;
+                transition: 0.4s;
+            }
+        }
+        &:hover {
+            span {
+                -webkit-transition: 0.4s;
+                transition: 0.4s;
+                &:nth-child(1) {
+                    -webkit-transform: rotate(45deg);
+                            transform: rotate(45deg);
+                    -webkit-transition: 0.4s;
+                    transition: 0.4s;
+                    top: 20px;
+                    width: 100%;
+                }
+                &:nth-child(2) {
+                    display: none;
+                }
+                &:nth-child(3) {
+                    top: 20px;
+                    width: 100%;
+                    -webkit-transform: rotate(-45deg);
+                            transform: rotate(-45deg);
+                    -webkit-transition: 0.4s;
+                    transition: 0.4s;
+                }
+            }
+        }
+    }
+    #sp-nav {
+        visibility: visible;
+        opacity: 1;
+        z-index: 990;
+        &:before {
+            -webkit-animation: nav-anime 1.4s ease 0s forwards;
+                    animation: nav-anime 1.4s ease 0s forwards;
+        }
+        .sp-nav-inner {
+            -webkit-animation: nav-anime-opacity 0.6s ease 0.4s forwards;
+                    animation: nav-anime-opacity 0.6s ease 0.4s forwards;
+        }
+    }
 }
