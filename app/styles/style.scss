@@ -123,8 +123,7 @@ ul {
     padding: 0 1rem;
     min-height: 100vh;
     h2 {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         font-size: 3rem;
     }
     h3 {
@@ -136,7 +135,7 @@ ul {
         font-size: 1.3rem;
     }
     p {
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
     }
     ul {
         margin-bottom: 2rem;
@@ -160,6 +159,7 @@ ul {
         background: #fff;
         padding: .5rem 1rem;
         border-radius: 1.8rem;
+        font-size: .8rem;
         &:hover {
             background: #000;
             color: #fff;
@@ -177,10 +177,57 @@ ul {
     .contets-item {
         width: 50%;
         height: 50vh;
-        padding: 2rem 2%;
+        position: relative;
+        z-index: 0;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         @media (max-width: 639px) {
             width: 100%;
             height: auto;
+        }
+        &::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            content: "";
+            background: rgba(0, 0, 0, .5);
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            transition: all .4s;
+        }
+        &:hover {
+            &::before {
+                background: rgba(0, 0, 0, .8);
+            }
+        }
+        &:nth-child(1) {
+            background-image: url(/1.jpg);
+        }
+        &:nth-child(2) {
+            background-image: url(/2.jpg);
+        }
+        &:nth-child(3) {
+            background-image: url(/3.jpg);
+        }
+        &:nth-child(4) {
+            background-image: url(/4.jpg);
+        }
+        .contets-item-inner {
+            position: relative;
+            padding: 2rem;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 600px;
+            margin: 0 auto;
         }
     }
 }

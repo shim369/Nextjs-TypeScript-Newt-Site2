@@ -11,6 +11,7 @@ const images = [
     `/1.jpg`,
     `/2.jpg`,
     `/3.jpg`,
+    `/4.jpg`,
 ];
 
 const SwiperBox = () => {
@@ -31,8 +32,7 @@ const SwiperBox = () => {
                                 src={src}
                                 width={1920}
                                 height={1280}
-                                alt='sample'
-                                className='text-c'
+                                alt='Next Tech'
                             />
                         </SwiperSlide>
                     );
