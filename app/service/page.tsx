@@ -11,37 +11,89 @@ export default function Page() {
     <div className={'container'}>
       <h2>SERVICE</h2>
       
-      <h3>サービス一覧</h3>
-      <ul>
+      <ul className={'services'}>
         <li>
-          <strong>1. ウェブサイト開発</strong><br />
-          使用技術: HTML, CSS/SASS, JavaScript, Astro<br />
-          価格: ¥300,000 ~
+          <h3>1. ウェブサイト開発</h3>
+          <table className={'tbl'}>
+            <tr>
+              <th>使用技術</th>
+              <td>HTML, CSS/SASS, JavaScript, Astro</td>
+            </tr>
+            <tr>
+              <th>価格</th>
+              <td>¥300,000 ~</td>
+            </tr>
+          </table>
         </li>
         <li>
-          <strong>2. Webアプリケーション開発</strong><br />
-          使用技術: Next.js, Nuxt.js, Python, Django<br />
-          価格: ¥500,000 ~
+          <h3>2. Webアプリケーション開発</h3>
+          <table className={'tbl'}>
+            <tr>
+              <th>使用技術</th>
+              <td>Next.js, Nuxt.js, Python, Django</td>
+            </tr>
+            <tr>
+              <th>価格</th>
+              <td>¥500,000 ~</td>
+            </tr>
+          </table>
         </li>
         <li>
-          <strong>3. CMS構築</strong><br />
-          使用技術: WordPress, MicroCMS, Newt<br />
-          価格: ¥200,000 ~
+          <h3>3. CMS構築</h3>
+          <table className={'tbl'}>
+            <tr>
+              <th>使用技術</th>
+              <td>WordPress, MicroCMS, Newt</td>
+            </tr>
+            <tr>
+              <th>価格</th>
+              <td>¥200,000 ~</td>
+            </tr>
+          </table>
         </li>
         <li>
-          <strong>4. デザイン・UI/UX</strong><br />
-          使用ツール: Figma, Adobe (Photoshop, Illustrator)<br />
-          価格: ¥150,000 ~
+          <h3>4. デザイン・UI/UX</h3>
+          <table className={'tbl'}>
+            <tr>
+              <th>使用技術</th>
+              <td>Figma, Adobe (Photoshop, Illustrator)</td>
+            </tr>
+            <tr>
+              <th>価格</th>
+              <td>¥150,000 ~</td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <h3>追加オプション</h3>
+          <table className={'tbl'}>
+            <tr>
+              <th>
+              メンテナンス
+              </th>
+              <td>
+                ¥20,000 ~ /Month
+              </td>
+            </tr>
+            <tr>
+              <th>
+              SEO対策
+              </th>
+              <td>
+              ¥50,000 ~
+              </td>
+            </tr>
+            <tr>
+              <th>
+              コンテンツ作成
+              </th>
+              <td>
+              ¥30,000 ~
+              </td>
+            </tr>
+          </table>
         </li>
       </ul>
-      
-      <h3>追加オプション</h3>
-      <ul>
-        <li>メンテナンス: ¥20,000/月</li>
-        <li>SEO対策: ¥50,000 ~</li>
-        <li>コンテンツ作成: ¥30,000 ~</li>
-      </ul>
-      
       <p>以上の価格はすべて参考価格であり、プロジェクトの規模や要件によって変動する場合があります。<br />詳細は<Link href="/contact">お問い合わせ</Link>ください。</p>
       </div>
     </section>
