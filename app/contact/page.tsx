@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Contact'
@@ -8,10 +7,10 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <section id="contact">
-      <div className={'container'}>
-      <h2>CONTACT</h2>
-
-      <h3>お問い合わせフォーム</h3>
+      <div className={'under-inner'}>
+        <h2>CONTACT</h2>
+      </div>
+      <div className={'container-inner'}>
       <form action="/submit" method="post">
         <div className={'form-group'}>
           <label htmlFor="name">名前（必須）</label>

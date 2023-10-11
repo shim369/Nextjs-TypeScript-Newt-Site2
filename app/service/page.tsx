@@ -8,8 +8,11 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <section id="service">
-    <div className={'container'}>
+    <div className={'under-inner'}>
       <h2>SERVICE</h2>
+    </div>
+      <div className={'container-inner'}>
+      <p className={'under-read'}>以下の価格はすべて参考価格であり、プロジェクトの規模や要件によって変動する場合があります。<br />詳細は<Link href="/contact">お問い合わせ</Link>ください。</p>
       
       <ul className={'services'}>
         <li>
@@ -65,7 +68,7 @@ export default function Page() {
           </table>
         </li>
         <li>
-          <h3>追加オプション</h3>
+          <h3>5. 追加オプション</h3>
           <table className={'tbl'}>
             <tr>
               <th>
@@ -94,7 +97,6 @@ export default function Page() {
           </table>
         </li>
       </ul>
-      <p>以上の価格はすべて参考価格であり、プロジェクトの規模や要件によって変動する場合があります。<br />詳細は<Link href="/contact">お問い合わせ</Link>ください。</p>
       </div>
     </section>
   )
