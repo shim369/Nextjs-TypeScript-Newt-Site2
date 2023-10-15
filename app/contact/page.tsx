@@ -62,11 +62,11 @@ export default function Page() {
         <dl>
           <dt><label htmlFor="name">Name*</label></dt>
           <dd>
-            <input id="name" name="name" type="text" className={'textarea'} required />
+            <input id="name" name="name" type="text" className={'textarea'} autoComplete="name" required />
           </dd>
           <dt><label htmlFor="email">Email*</label></dt>
           <dd>
-            <input id="email" name="email" type="email" className={'textarea'} required />
+            <input id="email" name="email" type="email" className={'textarea'} autoComplete="email" required />
           </dd>
           <dt><label htmlFor="message">Message*</label></dt>
           <dd>
