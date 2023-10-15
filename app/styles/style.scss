@@ -107,7 +107,6 @@ ul {
 
 .main-visual {
 	width: 100%;
-	min-height: 100vh;
 	.main-visual-inner {
 		overflow: hidden;
 		width: 100%;
@@ -117,6 +116,9 @@ ul {
 		align-items: center;
 		position: relative;
 		z-index: 1;
+		@media (max-width: 639px) {
+			height: 65vh;
+		}
 		h1 {
 			position: absolute;
 			z-index: 2;
