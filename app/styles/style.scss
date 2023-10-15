@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;900&family=Tulpen+One&display=swap');
-
 :root {
-	--base: #ffffff;
+	--base: #fff;
 	--bg-blend: multiply;
 	--blur: 0px;
 	--fg-blend: lighten;
@@ -44,7 +42,7 @@ p,
 li,
 table,
 .qa-list {
-	font-family: 'Lato', sans-serif;
+	font-family: var(--font-lato);
 }
 
 ul {
@@ -64,6 +62,7 @@ ul {
 	.logo {
 		font-size: 2.2rem;
 		margin-right: 3rem;
+		font-family: var(--font-tulpen_One);
 	}
 	.pc-nav {
 		display: flex;
@@ -77,6 +76,7 @@ ul {
 			padding: .5rem 1rem;
 			margin: 0 .5rem;
 			font-size: 1.4rem;
+			font-family: var(--font-tulpen_One);
 			@media (max-width: 896px) {
 				margin: 0 .3rem;
 			}
@@ -124,6 +124,7 @@ ul {
 			color: #fff;
 			mix-blend-mode: exclusion;
 			text-shadow: rgba(0,0,0,.2) 2px 2px 4px;
+			font-family: var(--font-tulpen_One);
 			@media (max-width: 896px) {
 				font-size: 3rem;
 			}
@@ -160,6 +161,7 @@ ul {
 	padding: .5rem 1rem;
 	border-radius: 1.8rem;
 	font-size: 1.2rem;
+	font-family: var(--font-tulpen_One);
 	&:hover {
 		background: #000;
 		color: #fff;
@@ -231,6 +233,7 @@ ul {
 		h2 {
 			margin-bottom: 2rem;
 			font-size: 2rem;
+			font-family: var(--font-tulpen_One);
 		}
 		p {
 			margin-bottom: 2rem;
@@ -375,7 +378,7 @@ ul {
 		}
 		.logo {
 			text-align: center;
-			font-family: 'Tulpen One', cursive;
+			font-family: var(--font-tulpen_One);
 			font-size: 3rem;
 			margin-bottom: 2rem;
 		}
@@ -389,6 +392,7 @@ ul {
 			a {
 				font-size: 2rem;
 				margin: 0 .8rem;
+				font-family: var(--font-tulpen_One);
 				@media (max-width: 639px) {
 					margin-bottom: 2rem;
 				}
@@ -525,6 +529,7 @@ section {
 			line-height: 1;
 			margin-bottom: 0;
 			font-size: 3rem;
+			font-family: var(--font-tulpen_One);
 		}
 	}
 	.under-read {
@@ -535,7 +540,7 @@ section {
 
 
 .tbl-title {
-	font-family: 'Tulpen One', cursive;
+	font-family: var(--font-tulpen_One);
 	font-size: 2rem;
 	margin-bottom: .5rem;
 	margin-left: .5rem;
@@ -693,6 +698,7 @@ section {
 			text-align: center;
 			margin-bottom: 2rem;
 			font-size: 2rem;
+			font-family: var(--font-tulpen_One);
 		}
 		.about-flex {
 			display: flex;
@@ -736,6 +742,7 @@ section {
 		padding-top: .5rem;
 		font-weight: 600;
 		font-size: 2rem;
+		font-family: var(--font-tulpen_One);
 		@media (max-width: 896px) {
 			float: none;
 			width: 100%;
@@ -781,7 +788,7 @@ section {
 		margin: 1rem auto 0;
 		width: 12.5rem;
 		background: #215a66;
-		font-family: 'Tulpen One', cursive;
+		font-family: var(--font-tulpen_One);
 		font-size: 1.3rem;
 		&:hover {
 			border: 1px solid #fff;
@@ -867,14 +874,14 @@ section {
 	h1 {
 		margin-bottom: 2rem;
 		font-size: 2rem;
-		font-family: 'Lato', sans-serif;
+		font-family: var(--font-lato);
 		@media (max-width: 693px) {
 			font-size: 1.3rem;
 		}
 	}
 	.date {
 		margin-bottom: 1rem;
-		font-family: 'Lato', sans-serif;
+		font-family: var(--font-lato);
 	}
 	img {
 		width: 100%;
@@ -936,7 +943,7 @@ section {
 				content: "Q.";
 				color: #fff;
 				font-weight: bold;
-				font-family: 'Tulpen One', cursive;
+				font-family: var(--font-tulpen_One);
 				@media (max-width: 896px) {
 					font-size: 1rem;
 					top: 1rem;
@@ -982,7 +989,7 @@ section {
 				content: "A.";
 				font-weight: bold;
 				color: #52adc9;
-				font-family: 'Tulpen One', cursive;
+				font-family: var(--font-tulpen_One);
 				@media (max-width: 896px) {
 					font-size: 1rem;
 					left: .8rem;
