@@ -107,6 +107,7 @@ ul {
 
 .main-visual {
 	width: 100%;
+	margin-bottom: 2rem;
 	.main-visual-inner {
 		overflow: hidden;
 		width: 100%;
@@ -146,6 +147,9 @@ ul {
 	margin: 0 auto;
 	padding: 3rem 1rem;
 	min-height: 100vh;
+	@media (max-width: 896px) {
+		padding: 1.5rem 1rem;
+	}
 	.container-inner {
 		max-width: 1440px;
 		margin: 0 auto;
