@@ -14,18 +14,21 @@ export default async function Article({ params }: Props) {
   if (!article) return
 
   return (
-    <>
-      <section className={'blog-detail'}>
+      <section>
+        <div className={'under-inner'}>
+          <h2>BLOG</h2>
+        </div>
+        <div className={'blog-detail'}>
         <hr />
         <div className={'blog-content'}>
           <h1>{article.title}</h1>
-          <div className={'date'}><span className={'material-icons'}>schedule</span>
+          <div className={'date'}>
             {new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(new Date(article.date))}
           </div>
           <div dangerouslySetInnerHTML={{ __html: article.body }} />
         </div>
         <hr />
+        </div>
       </section>
-    </>
   )
 }

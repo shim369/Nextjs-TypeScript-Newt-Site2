@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'About'
@@ -8,49 +9,58 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <section id="blog">
-    <div className={'under-inner'}>
-      <h2>ABOUT</h2>
-    </div>
-    <div className={'container-inner'}>
-      <div className={'pageNav'}>
-        <ul className={'pageNav__list'}>
-          <li>
-            <Link href="#a01">
-              VISION
-            </Link>
-          </li>
-          <li>
-            <Link href="#a02">
-              MISSION
-            </Link>
-          </li>
-          <li>
-            <Link href="#a03">
-              REASON
-            </Link>
-          </li>
-        </ul>
+      <div className={'under-inner'}>
+        <h2>ABOUT</h2>
       </div>
+      <div className={'container-inner'}>
+        <div className={'page-nav'}>
+          <ul className={'page-nav-list'}>
+            <li>
+              <Link href="#a01">
+                VISION
+              </Link>
+            </li>
+            <li>
+              <Link href="#a02">
+                MISSION
+              </Link>
+            </li>
+            <li>
+              <Link href="#a03">
+                REASON
+              </Link>
+            </li>
+          </ul>
+        </div>
 
-      <section id="a01" className={'about'}>
-        <div className={'about-inner'}>
-          <h3>VISION</h3>
-          <p>テクノロジーが日々進化する中で、常に最前線で最高のサービスを提供することを目指しています。私のビジョンは、クライアントが目指す成功をテクノロジーで実現するパートナーであることです。</p>
-        </div>
-      </section>
-      <section id="a02" className={'about'}>
-        <div className={'about-inner'}>
-        <h3>MISSION</h3>
-        <p>私のミッションは、クライアントのビジネスを理解し、それを高度なテクノロジーで具現化することです。単なる開発者ではなく、ビジネスの成功を共に目指すパートナーでありたいと考えています。</p>
-        </div>
-      </section>
-      <section id="a03" className={'about'}>
-        <div className={'about-inner'}>
-          <h3>REASON</h3>
-          <p>テクノロジーの進化がビジネスに多大な影響を与える現代において、「テクノロジーでビジネスをより良く、より効率的にする」という信念のもと、この事業を始めました。クライアントが抱える問題を解決し、ビジネスを次のレベルに引き上げることで、社会に貢献できると信じています。</p>
-        </div>
-      </section>
-    </div>
+        <section id="a01" className={'about'}>
+          <div className={'about-inner'}>
+            <h3>VISION</h3>
+            <div className="about-flex">
+              <Image src="/1.jpg" alt="VISION" width={600} height={400} />
+              <p>In the rapid evolution of technology, I always bear the mission of providing the latest innovative services. My vision is to be a true partner in helping clients achieve their desired success through the power of technology. I strive to stand at the forefront of technology and provide innovative solutions.</p>
+            </div>
+          </div>
+        </section>
+        <section id="a02" className={'about'}>
+          <div className={'about-inner'}>
+            <h3>MISSION</h3>
+            <div className="about-flex">
+              <p>My mission is to deeply understand the clients' businesses and leverage advanced technology to produce tangible results. I value walking alongside our clients as true partners in the pursuit of business success, rather than being just developers.</p>
+              <Image src="/2.jpg" alt="MISSION" width={600} height={400} />
+            </div>
+          </div>
+        </section>
+        <section id="a03" className={'about'}>
+          <div className={'about-inner'}>
+            <h3>REASON</h3>
+            <div className="about-flex">
+              <Image src="/3.jpg" alt="REASON" width={600} height={400} />
+              <p>The impact of the rapid evolution of technology on modern businesses is immeasurable. I launched this business based on the belief that "technology can make businesses more effective and improved." I believe in solving the challenges faced by clients and elevating businesses to the next level through technology, thereby providing value to society and achieving success.</p>
+            </div>
+          </div>
+        </section>
+      </div>
     </section>
   )
 }

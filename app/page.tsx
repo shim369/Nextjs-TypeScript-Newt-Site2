@@ -17,29 +17,29 @@ export default function Home() {
             <div className={'contets-item'}>
               <div className={'contets-item-inner'}>
               <h2>ABOUT</h2>
-              <p>私は2023年にこの事業を設立し、テクノロジーを活用してビジネスを加速することをミッションとしています。経験とスキルを活かして、あなたのビジネス成功のために全力でサポートします。</p>
-              <Link href="/about" className={'link-btn'}>詳しくはこちら</Link>
+              <p>I established this business in 2023 with a mission to leverage technology and accelerate businesses. I am committed to supporting your business success with my experience and skills.</p>
+              <Link href="/about" className={'link-btn'}>Learn more here</Link>
               </div>
             </div>
             <div className={'contets-item'}>
               <div className={'contets-item-inner'}>
               <h2>SERVICE</h2>
-              <p>HTML, CSS, JavaScript, Pythonなどを駆使して、あなたのビジネスに最適なウェブソリューションを提供します。オンラインショップから企業サイトまで、多様なニーズに対応します。</p>
-              <Link href="/service" className={'link-btn'}>詳しくはこちら</Link>
+              <p>We provide tailor-made web solutions for your business, utilizing HTML, CSS, JavaScript, Python, and more. From online shops to corporate websites, we cater to a wide range of needs.</p>
+              <Link href="/service" className={'link-btn'}>Learn more here</Link>
               </div>
             </div>
             <div className={'contets-item'}>
               <div className={'contets-item-inner'}>
               <h2>BLOG</h2>
-              <p>最新のテクノロジートレンドからプログラミングのチュートリアル、最新情報まで、幅広いトピックを網羅した記事を定期的に公開しています。業界の最新動向を把握するための信頼性の高い情報源です。</p>
-              <Link href="/blog" className={'link-btn'}>詳しくはこちら</Link>
+              <p>We regularly publish articles covering a wide range of topics, from the latest technology trends to programming tutorials and up-to-date information. It's a reliable source to stay informed about the latest industry trends.</p>
+              <Link href="/blog" className={'link-btn'}>Learn more here</Link>
               </div>
             </div>
             <div className={'contets-item'}>
               <div className={'contets-item-inner'}>
               <h2>FAQ</h2>
-              <p>料金設定から開発後のサポート、使用技術に至るまで、頻繁に寄せられる質問とその回答を一覧でご紹介しています。不明点や疑問があれば、このセクションで速やかに解決できるかもしれません。</p>
-              <Link href="/faq" className={'link-btn'}>詳しくはこちら</Link>
+              <p>From pricing and post-development support to the technologies we use, we have compiled frequently asked questions and their answers in one place. If you have any uncertainties or questions, this section might provide quick solutions.</p>
+              <Link href="/faq" className={'link-btn'}>Learn more here</Link>
               </div>
             </div>
           </div>
