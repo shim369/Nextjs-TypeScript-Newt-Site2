@@ -31,7 +31,7 @@ export default function Home() {
             <div className={'contets-item'}>
               <div className={'contets-item-inner'}>
               <h2>BLOG</h2>
-              <p>We regularly publish articles covering a wide range of topics, from the latest technology trends to programming tutorials and up-to-date information. It's a reliable source to stay informed about the latest industry trends.</p>
+              <p>We regularly publish articles covering a wide range of topics, from the latest technology trends to programming tutorials and up-to-date information. It&apos;s a reliable source to stay informed about the latest industry trends.</p>
               <Link href="/blog" className={'link-btn'}>Learn more here</Link>
               </div>
             </div>

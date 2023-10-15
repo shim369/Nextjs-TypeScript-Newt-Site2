@@ -46,7 +46,7 @@ export default function Page() {
           <div className={'about-inner'}>
             <h3>MISSION</h3>
             <div className="about-flex">
-              <p>My mission is to deeply understand the clients' businesses and leverage advanced technology to produce tangible results. I value walking alongside our clients as true partners in the pursuit of business success, rather than being just developers.</p>
+              <p>My mission is to deeply understand the clients&apos; businesses and leverage advanced technology to produce tangible results. I value walking alongside our clients as true partners in the pursuit of business success, rather than being just developers.</p>
               <Image src="/2.jpg" alt="MISSION" width={600} height={400} />
             </div>
           </div>
@@ -56,7 +56,7 @@ export default function Page() {
             <h3>REASON</h3>
             <div className="about-flex">
               <Image src="/3.jpg" alt="REASON" width={600} height={400} />
-              <p>The impact of the rapid evolution of technology on modern businesses is immeasurable. I launched this business based on the belief that "technology can make businesses more effective and improved." I believe in solving the challenges faced by clients and elevating businesses to the next level through technology, thereby providing value to society and achieving success.</p>
+              <p>The impact of the rapid evolution of technology on modern businesses is immeasurable. I launched this business based on the belief that &quot;technology can make businesses more effective and improved.&quot; I believe in solving the challenges faced by clients and elevating businesses to the next level through technology, thereby providing value to society and achieving success.</p>
             </div>
           </div>
         </section>

@@ -12,7 +12,7 @@ export default function Page() {
       <h2>SERVICE</h2>
     </div>
       <div className={'container-inner'}>
-      <p className={'under-read'}>The prices listed above are all reference prices and may vary depending on the project's scope and requirements.<br />For more details, please inquire.</p>
+      <p className={'under-read'}>The prices listed above are all reference prices and may vary depending on the project&apos;s scope and requirements.<br />For more details, please inquire.</p>
       
       <ul className={'services'}>
         <li>

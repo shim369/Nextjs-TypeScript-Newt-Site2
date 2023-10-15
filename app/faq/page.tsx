@@ -23,7 +23,7 @@ export default function Page() {
         <h2>FAQ</h2>
       </div>
       <div className={'container-inner'}>
-      <p className={'under-read'}>I are here to answer your questions. If you have any inquiries, <br />please don't hesitate to contact us.</p>
+      <p className={'under-read'}>I are here to answer your questions. If you have any inquiries, <br />please don&apos;t hesitate to contact us.</p>
         <div className={'qa-list'}>
           {faqData.map((faq, index) => (
             <dl className={'qa'} key={index}>
