@@ -60,7 +60,7 @@ ul {
 		height: 10vh;
 	}
 	.logo {
-		font-size: 2.2rem;
+		font-size: 2.8rem;
 		margin-right: 3rem;
 		font-family: var(--font-tulpen_One);
 	}
@@ -101,8 +101,17 @@ ul {
 	}
 }
 
+.swiper-slide {
+	img {
+		object-fit: cover !important;
+	}
+}
+
 .swiper-button-prev, .swiper-button-next {
 	color: #fff !important;
+	@media (max-width: 639px) {
+		display: none !important;
+	}
 }
 
 .main-visual {
@@ -129,10 +138,10 @@ ul {
 			text-shadow: rgba(0,0,0,.2) 2px 2px 4px;
 			font-family: var(--font-tulpen_One);
 			@media (max-width: 896px) {
-				font-size: 3rem;
+				font-size: 4ch;
 			}
 			@media (max-width: 639px) {
-				font-size: 2.5rem;
+				font-size: 3rem;
 			}
 		}
 	}
@@ -251,7 +260,7 @@ ul {
 #nav-toggle {
 	display: block;
 	position: fixed;
-	top: .5rem;
+	top: .8rem;
 	right: 1rem;
 	width: 65px;
 	height: 65px;
@@ -334,7 +343,7 @@ ul {
 	-webkit-transition: opacity 0.4s ease, visibility 0.4s ease;
 	transition: opacity 0.4s ease, visibility 0.4s ease;
 	@media (max-width: 639px) {
-		padding: 40px 20px;
+		padding: 3vh 1rem;
 	}
 	&::before {
 		position: absolute;
