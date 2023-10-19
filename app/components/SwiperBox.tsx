@@ -8,10 +8,10 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 
 const images = [
-    `/1.jpg`,
-    `/2.jpg`,
-    `/3.jpg`,
-    `/4.jpg`,
+    `/1.webp`,
+    `/2.webp`,
+    `/3.webp`,
+    `/4.webp`,
 ];
 
 const SwiperBox = () => {
