@@ -945,10 +945,6 @@ section {
 			font-size: 1rem;
 			-webkit-transition: all 0.2s ease-in-out 0s;
 			transition: all 0.2s ease-in-out 0s;
-			@media (max-width: 896px) {
-				padding: .8rem 2rem .8rem 2rem;
-				font-size: .8rem;
-			}
 			&::before {
 				font-size: 1.3rem;
 				line-height: 1;
@@ -960,11 +956,6 @@ section {
 				color: #fff;
 				font-weight: bold;
 				font-family: var(--font-tulpen_One);
-				@media (max-width: 896px) {
-					font-size: 1rem;
-					top: 1rem;
-					left: .8rem;
-				}
 			}
 			&::after {
 				position: absolute;
@@ -991,11 +982,6 @@ section {
 			position: relative;
 			margin: 0;
 			padding: 1rem 1.5rem 1rem 3rem;
-			@media (max-width: 896px) {
-				margin: 0;
-				padding: .8rem 2rem .8rem 2rem;
-				font-size: .8rem;
-			}
 			&::before {
 				font-size: 1.3rem;
 				line-height: 1;
@@ -1007,8 +993,6 @@ section {
 				color: #52adc9;
 				font-family: var(--font-tulpen_One);
 				@media (max-width: 896px) {
-					font-size: 1rem;
-					left: .8rem;
 					margin-top: .25rem;
 				}
 			}
