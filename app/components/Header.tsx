@@ -40,8 +40,8 @@ export const Header = () => {
             </nav>
         </div>
         <ul className={'sns-link'}>
-          <li><Link href="https://github.com/shim369" target="_blank"><i className="fa fa-github"></i></Link></li>
-          <li><Link href="https://sohtani.pythonanywhere.com/" target="_blank"><i className="fa fa-pencil"></i></Link></li>
+          <li><Link href="https://github.com/shim369" target="_blank" title="GitHub"><i className="fa fa-github"></i></Link></li>
+          <li><Link href="https://sohtani.pythonanywhere.com/" target="_blank" title="TECH BLOG"><i className="fa fa-pencil"></i></Link></li>
         </ul>
     </header>
     <div id="nav-toggle">
