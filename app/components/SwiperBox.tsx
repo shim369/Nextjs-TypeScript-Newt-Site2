@@ -22,7 +22,7 @@ const SwiperBox = () => {
                 navigation
                 pagination={{ type: "bullets" }}
                 modules={[Navigation, Pagination, Autoplay]}
-                className="mySwiper"
+                className={'swiper-box'}
                 loop={true}
             >
                 {images.map((src: string, index: number) => {
