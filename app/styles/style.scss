@@ -720,6 +720,9 @@ section {
 	@media (max-width: 896px) {
 		width: 90%;
 	}
+	@media (min-width: 1200px) {
+		width: 60%;
+	}
 	.about-inner {
 		margin: 0 auto;
 		background-color: #0a3139;
