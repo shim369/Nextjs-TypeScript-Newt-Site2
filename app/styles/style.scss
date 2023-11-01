@@ -123,14 +123,7 @@ ul {
   }
 }
 
-.swiper-button-prev, .swiper-button-next {
-	color: #fff !important;
-	@media (max-width: 639px) {
-		display: none !important;
-	}
-}
-
-.swiper-pagination-bullet-active {
+.swiper-scrollbar-drag {
 	background: #fff !important;
 }
 
