@@ -806,7 +806,7 @@ section {
 	dt {
 		float: left;
 		width: 14rem;
-		padding-top: .5rem;
+		padding-top: 1.5rem;
 		font-weight: 600;
 		font-size: 2rem;
 		font-family: var(--font-tulpen_One);
@@ -819,13 +819,14 @@ section {
 	dd {
 		padding-left: 14rem;
 		padding-bottom: 1.5rem;
-		padding-top: .6rem;
+		padding-top: 1.5rem;
 		line-height: 1.5;
 		border-bottom: 1px dotted #6b6b6b;
 		@media (max-width: 896px) {
 			width: 100%;
 			padding-left: 0;
 			border: none;
+			padding-top: 1rem;
 		}
 		&:last-child {
 			border-bottom: none;
