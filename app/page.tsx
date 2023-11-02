@@ -74,7 +74,7 @@ export default function Home() {
     });
     
     ScrollTrigger.create({
-      trigger: '.main-visual',
+      trigger: '.swiper-visual',
       start: 'top center',
       end: 'center center',
       onEnter: () => {
