@@ -85,17 +85,17 @@ ul {
 		padding: 1rem;
 		height: 10vh;
 		.top-left {
-			@media (max-width: 1200px) {
-				align-items: flex-start;
-			}
+			width: 80%;
+			flex-direction: row;
+			align-items: center;
+			justify-content: flex-start;
 		}
 	}
 	.header-logo {
-		display: none;
+		font-size: 3rem;
+		font-family: var(--font-tulpen_One);
 		@media (max-width: 896px) {
 			display: block;
-			font-size: 2rem;
-			font-family: var(--font-tulpen_One);
 			color: #fff;
 		}
 	}
