@@ -321,7 +321,7 @@ ul {
 #nav-toggle {
 	display: block;
 	position: fixed;
-	top: .8rem;
+	top: 1rem;
 	right: 1rem;
 	width: 65px;
 	height: 65px;
@@ -332,9 +332,6 @@ ul {
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
 	border-radius: 50%;
-	@media (max-width: 639px) {
-		top: 1.4rem;
-	}
 	div {
 		position: relative;
 	}
