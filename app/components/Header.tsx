@@ -31,6 +31,7 @@ export const Header = () => {
     <header className={'header'}>
         <div className={'header-inner'}>
           <div className={'top-left'}>
+            <a href="/" className={'header-logo'}>NEXT TECH</a>
             <nav className={'pc-nav'}>
                 <Link href="/">TOP</Link>
                 <Link href="/about">ABOUT</Link>
@@ -57,7 +58,7 @@ export const Header = () => {
       <div className={'sp-nav-inner'}>
         <div className={'sp-nav-links'}>
             <p className={'logo'}>
-              <Link href="/">Next Tech</Link>
+              <Link href="/">NEXT TECH</Link>
             </p>
             <nav className={'sp-nav'}></nav>
         </div>

@@ -30,7 +30,7 @@ const SwiperBox = () => {
                                 src={src}
                                 width={1920}
                                 height={1280}
-                                alt='Next Tech'
+                                alt='NEXT TECH'
                                 priority={index === 0}
                             />
                         </SwiperSlide>
