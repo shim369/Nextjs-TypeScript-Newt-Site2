@@ -1,18 +1,132 @@
+"use client"
 import Link from 'next/link'
 import './styles/style.scss'
 import SwiperBox from './components/SwiperBox'
+import Contact from './components/Contact'
+import { useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export default function Home() {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const openingLogo = document.querySelector('.opening-logo');
+    const openingAnimation = document.querySelector('.opening-animation');
+    const topLeftInner = document.querySelector('.top-left-inner');
+    const topRight = document.querySelector('.top-right');
+    const leftDiv = document.querySelector('.left-div');
+    const rightDiv = document.querySelector('.right-div');
+    const h2 = document.querySelector('.video-container h2');
+    const contentsBox = document.querySelector('.contents-box');
+    const h3 = document.querySelector('.main-visual h3');
+    const contact = document.querySelector('.contact');
+  
+    // 初期状態で非表示にする
+    gsap.set(openingLogo, { autoAlpha: 0 });
+    gsap.set(topLeftInner, { y: '30px', autoAlpha: 0 });
+    gsap.set(topRight, { autoAlpha: 0 });
+    gsap.set(contentsBox, { y: '30px', autoAlpha: 0 });
+    gsap.set(h3, { autoAlpha: 0 });
+    gsap.set(contact, { y: '30px', autoAlpha: 0 });
+  
+    const openingLogoTimeline = gsap.timeline();
+  
+    openingLogoTimeline.to(openingLogo, { autoAlpha: 1, duration: 0.5, delay: 0.5 });
+    openingLogoTimeline.call(() => {
+      gsap.to(openingAnimation, { autoAlpha: 0, duration: 0.5, delay: 1 });
+    });
+  
+    // .top-leftを下からふわっと表示
+    openingLogoTimeline.to(topLeftInner, { y: '0%', autoAlpha: 1, duration: 0.5, delay: 1, ease: 'power4.out' });
+  
+    // .top-rightを非表示からふわっと表示
+    openingLogoTimeline.to(topRight, { autoAlpha: 1, duration: 1, delay: 0.5, ease: 'power4.out' }, '-=0.5');
+  
+    ScrollTrigger.create({
+      trigger: '.video-container',
+      start: 'top center',
+      end: 'bottom center',
+      onEnter: () => {
+        gsap.to(leftDiv, { width: 0, duration: 0.5 });
+        gsap.to(rightDiv, { width: 0, duration: 0.5 });
+        gsap.to(h2, { autoAlpha: 1, duration: 0, delay: 0.5 });
+      },
+      onEnterBack: () => {
+        gsap.to(leftDiv, { width: 0, duration: 0.5 });
+        gsap.to(rightDiv, { width: 0, duration: 0.5 });
+        gsap.to(h2, { autoAlpha: 1, duration: 0, delay: 0.5 });
+      },
+      onLeave: () => {
+        gsap.to(leftDiv, { width: '50%', duration: 0.5 });
+        gsap.to(rightDiv, { width: '50%', duration: 0.5 });
+        gsap.to(h2, { autoAlpha: 0, duration: 0, delay: 0.5 });
+      },
+      onLeaveBack: () => {
+        gsap.to(leftDiv, { width: '50%', duration: 0.5 });
+        gsap.to(rightDiv, { width: '50%', duration: 0.5 });
+        gsap.to(h2, { autoAlpha: 0, duration: 0, delay: 0.5 });
+      },
+    });
+
+    // スクロールトリガーのトリガー要素として、各 .contets-item を設定
+      ScrollTrigger.create({
+        trigger: contentsBox,
+        start: 'top center', // スクロールトリガーのアクティベーション位置を調整
+        end: 'center center',
+        onEnter: () => {
+          gsap.to(contentsBox, { autoAlpha: 1, duration: 0.5, delay: 0.2, ease: 'power4.out' });
+        },
+    });
+    
+    // main-visualのh3を表示
+    ScrollTrigger.create({
+      trigger: '.main-visual',
+      start: 'top center',
+      end: 'center center',
+      onEnter: () => {
+        gsap.to(h3, { autoAlpha: 1, duration: 0.5, ease: 'power4.out' });
+      },
+    });
+  
+    // CONTACTセクションを下からふわっと表示
+    ScrollTrigger.create({
+      trigger: contact,
+      start: 'top center',
+      end: 'center center',
+      onEnter: () => {
+        gsap.to(contact, { y: '0%', autoAlpha: 1, duration: 0.5, delay: 0.2, ease: 'power4.out' });
+      },
+    });
+  
+  }, []);
+
   return (
     <>
-      <section id="home" className={'main-visual'}>
-          <div className={'main-visual-inner'}>
-            <SwiperBox />
-            <h1>Increasing Business Velocity <br />through Technology</h1>
+      <div className={'opening-animation'}>
+        <p className={'opening-logo'}>NEXT TECH</p>
+      </div>
+      <section className={'top-visual'}>
+        <div className={'top-left'}>
+          <div className={'top-left-inner'}>
+            <a href="/" className={'logo'}>NEXT TECH</a>
+            <p>Welcome to NEXT TECH.<br />Your gateway to cutting-edge tech solutions.</p>
           </div>
+        </div>
+        <div className={'top-right'}>
+            <img src="/top-v.jpg" alt="NEXT TECH" />
+        </div>
+      </section>
+      <section className={'video-container'}>
+        <div className="left-div"></div>
+        <div className="right-div"></div>
+        <h2>
+          Increasing Business Velocity <br />through Technology
+        </h2>
+        <video className={'video'} src="/video.mp4" loop autoPlay muted playsInline />
       </section>
 
-      <section>
+
+      <section id="service">
           <div className={'contents-box'}>
             <div className={'contets-item'}>
               <div className={'contets-item-inner'}>
@@ -43,6 +157,16 @@ export default function Home() {
               </div>
             </div>
           </div>
+      </section>
+      <section id="home" className={'swiper-visual'}>
+          <div className={'swiper-visual-inner'}>
+            <SwiperBox />
+            <h3>Would you like to try the latest technology?</h3>
+          </div>
+      </section>
+      <section className={'contact'}>
+        <h2>CONTACT</h2>
+        <Contact />
       </section>
     </>
   )

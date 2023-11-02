@@ -7,7 +7,7 @@ export const Header = () => {
 	const navLinks = useRef<HTMLElement[]>([]);
 	const spNav = useRef<HTMLElement | null>(null);
   useEffect(() => {
-    navLinks.current = Array.from(document.querySelectorAll(".pc-nav a")); // NodeListをHTMLElementの配列に変換
+    navLinks.current = Array.from(document.querySelectorAll(".pc-nav a"));
     spNav.current = document.querySelector(".sp-nav");
   
     if (navLinks.current.length > 0 && spNav.current) {
@@ -30,14 +30,16 @@ export const Header = () => {
     <>
     <header className={'header'}>
         <div className={'header-inner'}>
-            <a href="/" className={'logo'}>NEXT TECH</a>
+          <div className={'top-left'}>
             <nav className={'pc-nav'}>
+                <Link href="/">TOP</Link>
                 <Link href="/about">ABOUT</Link>
                 <Link href="/service">SERVICE</Link>
                 <Link href="/blog">BLOG</Link>
                 <Link href="/faq">FAQ</Link>
                 <Link href="/contact">CONTACT</Link>
             </nav>
+          </div>
         </div>
         <ul className={'sns-link'}>
           <li><Link href="https://github.com/shim369" target="_blank" title="GitHub"><i className="fa fa-github"></i></Link></li>

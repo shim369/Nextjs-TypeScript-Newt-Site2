@@ -1,11 +1,10 @@
 "use client";
 import Image from 'next/image';
-import { Scrollbar, Autoplay, EffectFade } from "swiper/modules";
+import { Autoplay, EffectFade } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
-import 'swiper/css/scrollbar';
 
 const images = [
     `/1.webp`,
@@ -18,11 +17,9 @@ const SwiperBox = () => {
     return (
         <>
             <Swiper
-                scrollbar={{hide: true}}
                 autoplay
                 effect={'fade'}
-                pagination={{ type: "bullets" }}
-                modules={[Scrollbar, Autoplay, EffectFade]}
+                modules={[Autoplay, EffectFade]}
                 className={'swiper-box'}
                 loop={true}
             >

@@ -3,6 +3,7 @@ import './styles/style.scss'
 import type { Metadata } from 'next'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
+
 const tulpen_one = Tulpen_One({
   weight: '400',
   subsets: ['latin'],
@@ -29,13 +30,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${tulpen_one.variable} ${lato.variable}`}>
       <body>
-        <Header />
-        <main className={'main'}>
-          <div className={'container'}>
-          {children}
-          </div>
-        </main>
-        <Footer />
+          <Header />
+          <main className={'main'}>
+            <div className={'container'}>
+            {children}
+            </div>
+          </main>
+          <Footer />
       </body>
     </html>
   )
