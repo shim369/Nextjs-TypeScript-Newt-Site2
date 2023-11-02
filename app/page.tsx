@@ -6,8 +6,8 @@ import Contact from './components/Contact'
 import React, { useRef, useEffect } from 'react'
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import video_mp4 from "./assets/video.mp4"
-import video_webm from "./assets/video.webm"
+import video_mp4 from './assets/video.mp4'
+import video_webm from './assets/video.webm'
 
 export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -126,6 +126,7 @@ export default function Home() {
           ref={videoRef}
           loop
           muted
+          poster="/poster.png"
         >
           <source src={video_mp4} type="video/mp4" />
           <source src={video_webm} type="video/webm" />
