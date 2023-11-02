@@ -813,18 +813,19 @@ section {
 		@media (max-width: 896px) {
 			float: none;
 			width: 100%;
-			padding-top: .8rem;
+			padding-top: 1.2rem;
 		}
 	}
 	dd {
 		padding-left: 14rem;
-		padding-bottom: .5rem;
+		padding-bottom: 1.5rem;
 		padding-top: .6rem;
 		line-height: 1.5;
 		border-bottom: 1px dotted #6b6b6b;
 		@media (max-width: 896px) {
 			width: 100%;
 			padding-left: 0;
+			border: none;
 		}
 		&:last-child {
 			border-bottom: none;
@@ -832,7 +833,7 @@ section {
 	}
 	.textarea {
 		border: 0;
-		padding: .5rem .6rem;
+		padding: 1rem .6rem;
 		width: 100%;
 		border-radius: 0;
 		appearance: none;
@@ -1145,7 +1146,7 @@ section {
 		height: 100%;
 		background-color: rgba(0, 0, 0, .8);
 		z-index: 3;
-		@media (max-width: 896px) {
+		@media (max-width: 639px) {
 			display: none;
 		}
 	}
@@ -1157,7 +1158,7 @@ section {
 		height: 100%;
 		background-color: rgba(0, 0, 0, .8);
 		z-index: 3;
-		@media (max-width: 896px) {
+		@media (max-width: 639px) {
 			display: none;
 		}
 	}
