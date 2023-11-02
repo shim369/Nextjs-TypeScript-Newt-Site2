@@ -18,10 +18,9 @@ export default function Home() {
     const rightDiv = document.querySelector('.right-div');
     const h2 = document.querySelector('.video-container h2');
     const contentsBox = document.querySelector('.contents-box');
-    const h3 = document.querySelector('.main-visual h3');
+    const h3 = document.querySelector('.swiper-visual h3');
     const contact = document.querySelector('.contact');
   
-    // 初期状態で非表示にする
     gsap.set(openingLogo, { autoAlpha: 0 });
     gsap.set(topLeftInner, { y: '30px', autoAlpha: 0 });
     gsap.set(topRight, { autoAlpha: 0 });
@@ -36,10 +35,7 @@ export default function Home() {
       gsap.to(openingAnimation, { autoAlpha: 0, duration: 0.5, delay: 1 });
     });
   
-    // .top-leftを下からふわっと表示
     openingLogoTimeline.to(topLeftInner, { y: '0%', autoAlpha: 1, duration: 0.5, delay: 1, ease: 'power4.out' });
-  
-    // .top-rightを非表示からふわっと表示
     openingLogoTimeline.to(topRight, { autoAlpha: 1, duration: 1, delay: 0.5, ease: 'power4.out' }, '-=0.5');
   
     ScrollTrigger.create({
@@ -68,17 +64,15 @@ export default function Home() {
       },
     });
 
-    // スクロールトリガーのトリガー要素として、各 .contets-item を設定
       ScrollTrigger.create({
         trigger: contentsBox,
-        start: 'top center', // スクロールトリガーのアクティベーション位置を調整
+        start: 'top center', 
         end: 'center center',
         onEnter: () => {
           gsap.to(contentsBox, { autoAlpha: 1, duration: 0.5, delay: 0.2, ease: 'power4.out' });
         },
     });
     
-    // main-visualのh3を表示
     ScrollTrigger.create({
       trigger: '.main-visual',
       start: 'top center',
@@ -88,7 +82,6 @@ export default function Home() {
       },
     });
   
-    // CONTACTセクションを下からふわっと表示
     ScrollTrigger.create({
       trigger: contact,
       start: 'top center',
