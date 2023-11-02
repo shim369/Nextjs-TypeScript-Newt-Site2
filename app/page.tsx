@@ -9,7 +9,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import video_mp4 from "/video.mp4"
 import video_webm from "/video.webm"
 
-export default function Home(): React.JSX.Element {
+export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -94,7 +94,7 @@ export default function Home(): React.JSX.Element {
       },
     });
     if (videoRef.current) {
-      videoRef.current.play();
+      videoRef.current?.play();
     }
   
   }, [videoRef]);
@@ -124,9 +124,9 @@ export default function Home(): React.JSX.Element {
         <video
           className={'video'}
           ref={videoRef}
-          style={{ height: "100%", width: "100%" }}
-          loop autoPlay muted playsInline
-          >
+          loop
+          muted
+        >
           <source src={video_mp4} type="video/mp4" />
           <source src={video_webm} type="video/webm" />
         </video>
