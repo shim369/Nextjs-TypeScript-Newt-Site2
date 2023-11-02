@@ -3,9 +3,10 @@ import Link from 'next/link'
 import './styles/style.scss'
 import SwiperBox from './components/SwiperBox'
 import Contact from './components/Contact'
-import { useEffect,useRef } from 'react';
+import React, { useRef, useEffect } from 'react'
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import video_mp4 from "/video.mp4"
 
 export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -125,7 +126,7 @@ export default function Home() {
           style={{ height: "100%", width: "100%" }}
           loop autoPlay muted playsInline
           >
-          <source src="/video.mp4" type="video/mp4" />
+          <source src={video_mp4} type="video/mp4" />
         </video>
       </section>
 
