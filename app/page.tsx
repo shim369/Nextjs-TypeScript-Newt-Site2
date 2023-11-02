@@ -1,5 +1,6 @@
 "use client"
 import Link from 'next/link'
+import Image from 'next/image'
 import './styles/style.scss'
 import SwiperBox from './components/SwiperBox'
 import Contact from './components/Contact'
@@ -112,7 +113,7 @@ export default function Home() {
           </div>
         </div>
         <div className={'top-right'}>
-            <img src="/top-v.jpg" alt="NEXT TECH" />
+            <Image src="/top-v.webp" alt="NEXT TECH" width={681} height={400} priority />
         </div>
       </section>
       <section className={'video-container'}>
@@ -126,7 +127,7 @@ export default function Home() {
           ref={videoRef}
           loop
           muted
-          poster="/poster.png"
+          poster="/poster.webp"
         >
           <source src={video_mp4} type="video/mp4" />
           <source src={video_webm} type="video/webm" />
