@@ -7,6 +7,7 @@ import React, { useRef, useEffect } from 'react'
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import video_mp4 from "/video.mp4"
+import video_webm from "/video.webm"
 
 export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -127,6 +128,7 @@ export default function Home() {
           loop autoPlay muted playsInline
           >
           <source src={video_mp4} type="video/mp4" />
+          <source src={video_webm} type="video/webm" />
         </video>
       </section>
 
