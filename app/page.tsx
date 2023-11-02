@@ -9,7 +9,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import video_mp4 from "/video.mp4"
 import video_webm from "/video.webm"
 
-export default function Home() {
+export default function Home(): React.JSX.Element {
   const videoRef = useRef<HTMLVideoElement>(null);
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
