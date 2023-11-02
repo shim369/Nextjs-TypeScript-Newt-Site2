@@ -3,11 +3,12 @@ import Link from 'next/link'
 import './styles/style.scss'
 import SwiperBox from './components/SwiperBox'
 import Contact from './components/Contact'
-import { useEffect } from 'react';
+import { useEffect,useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export default function Home() {
+  const videoRef = useRef<HTMLVideoElement>(null);
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     const openingLogo = document.querySelector('.opening-logo');
@@ -90,8 +91,11 @@ export default function Home() {
         gsap.to(contact, { y: '0%', autoAlpha: 1, duration: 0.5, delay: 0.2, ease: 'power4.out' });
       },
     });
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
   
-  }, []);
+  }, [videoRef]);
 
   return (
     <>
@@ -115,7 +119,12 @@ export default function Home() {
         <h2>
           Increasing Business Velocity <br />through Technology
         </h2>
-        <video className={'video'} loop autoPlay muted playsInline>
+        <video
+          className={'video'}
+          ref={videoRef}
+          style={{ height: "100%", width: "100%" }}
+          loop autoPlay muted playsInline
+          >
           <source src="/video.mp4" type="video/mp4" />
         </video>
       </section>
