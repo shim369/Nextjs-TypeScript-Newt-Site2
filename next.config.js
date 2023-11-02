@@ -1,10 +1,22 @@
-/** @type {import('next').NextConfig} */
-const path = require('path')
+const path = require('path');
 
-const nextConfig = {
-    sassOptions: {
-        includePaths: [path.join(__dirname, 'styles')]
-    }
-}
-
-module.exports = nextConfig
+module.exports = {
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    config.module.rules.push({
+    test: /\.(mp4|webm)$/,
+    use: [
+        {
+          loader: 'file-loader',
+          options: {
+            publicPath: '/_next',
+            name: 'static/media/[name].[hash].[ext]',
+          },
+        },
+      ],
+    });
+    return config;
+  },
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
+  },
+};
