@@ -115,9 +115,10 @@ export default function Home() {
         <h2>
           Increasing Business Velocity <br />through Technology
         </h2>
-        <video className={'video'} src="/video.mp4" loop autoPlay muted playsInline />
+        <video className={'video'} loop autoPlay muted playsInline>
+          <source src="/video.mp4" type="video/mp4" />
+        </video>
       </section>
-
 
       <section id="service">
           <div className={'contents-box'}>

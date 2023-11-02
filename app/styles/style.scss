@@ -1147,9 +1147,6 @@ section {
 		height: 100%;
 		background-color: rgba(0, 0, 0, .8);
 		z-index: 3;
-		@media (max-width: 639px) {
-			display: none;
-		}
 	}
 	.right-div {
 		position: absolute;
@@ -1159,9 +1156,6 @@ section {
 		height: 100%;
 		background-color: rgba(0, 0, 0, .8);
 		z-index: 3;
-		@media (max-width: 639px) {
-			display: none;
-		}
 	}
 	.video {
 		position: absolute;
