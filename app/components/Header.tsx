@@ -30,7 +30,6 @@ export const Header = () => {
     <>
     <header className={'header'}>
         <div className={'header-inner'}>
-          <div className={'top-left'}>
             <a href="/" className={'header-logo'}>NEXT TECH</a>
             <nav className={'pc-nav'}>
                 <Link href="/">TOP</Link>
@@ -40,7 +39,6 @@ export const Header = () => {
                 <Link href="/faq">FAQ</Link>
                 <Link href="/contact">CONTACT</Link>
             </nav>
-          </div>
         </div>
         <ul className={'sns-link'}>
           <li><Link href="https://github.com/shim369" target="_blank" title="GitHub"><i className="fa fa-github"></i></Link></li>
