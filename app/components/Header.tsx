@@ -30,7 +30,7 @@ export const Header = () => {
     <>
     <header className={'header'}>
         <div className={'header-inner'}>
-            <a href="/" className={'header-logo'}>NEXT TECH</a>
+            <Link href="/" className={'header-logo'}>NEXT TECH</Link>
             <nav className={'pc-nav'}>
                 <Link href="/">TOP</Link>
                 <Link href="/about">ABOUT</Link>
