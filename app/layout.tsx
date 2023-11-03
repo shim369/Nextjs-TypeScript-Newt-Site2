@@ -9,12 +9,14 @@ const tulpen_one = Tulpen_One({
   subsets: ['latin'],
   variable: '--font-tulpen_One',
   display: "swap",
+  preload: true,
 })
 const lato = Lato({
   weight: '300',
   subsets: ['latin'],
   variable: '--font-lato',
   display: "swap",
+  preload: true,
 })
 
 export const metadata: Metadata = {
