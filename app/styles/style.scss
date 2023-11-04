@@ -6,7 +6,7 @@
 	--foreground: #004f70;
 	--opacity: 1;
 	--spacing: 1%;
-	--blue: #52adc9;
+	--blue: rgb(3, 135, 162);
 }
 
 * {
@@ -681,7 +681,7 @@ section {
 		width: 35%;
 		text-align: center;
 		font-weight: normal;
-		background: #0a3139;
+		background: #036478;
 	}
 	td {
 		padding: 1rem 0 1rem 2rem;
@@ -743,7 +743,7 @@ section {
 			width: 28%;
 			margin: 0 2% 20px;
 			position: relative;
-			border: 1px solid #215a66;
+			border: 1px solid var(--blue);
 			-webkit-transition: 0.4s;
 			transition: 0.4s;
 			@media all and (max-width: 1367px) {
@@ -759,7 +759,7 @@ section {
 				right: 0;
 				margin: 0 auto;
 				bottom: -20px;
-				border-top: 15px solid #215a66;
+				border-top: 15px solid var(--blue);
 				border-left: 10px solid transparent;
 				border-right: 10px solid transparent;
 			}
@@ -773,7 +773,7 @@ section {
 				&:hover {
 					-webkit-transition: 0.4s;
 					transition: 0.4s;
-					background-color: #215a66;
+					background-color: var(--blue);
 					color: #fff;
 				}
 			}
@@ -785,7 +785,7 @@ section {
 	position: relative;
 	margin: 2.5rem auto;
 	width: 80%;
-	border: 1px solid #0a3139;
+	border: 1px solid #036478;
 	padding: 1rem;
 	@media (max-width: 896px) {
 		width: 90%;
@@ -795,7 +795,7 @@ section {
 	}
 	.about-inner {
 		margin: 0 auto;
-		background-color: #0a3139;
+		background-color: #036478;
 		padding: 3rem 1rem;
 		width: 100%;
 		text-align: center;
@@ -1015,7 +1015,7 @@ section {
 		position: relative;
 		margin: 1.5rem 0 0;
 		cursor: pointer;
-		border: 1px solid #215a66;
+		border: 1px solid var(--blue);
 		@media (max-width: 896px) {
 			margin: .8rem 0 0;
 		}
@@ -1033,7 +1033,7 @@ section {
 		dt {
 			position: relative;
 			padding: 1rem 1.5rem 1rem 3rem;
-			background-color: #215a66;
+			background-color: var(--blue);
 			font-size: 1rem;
 			-webkit-transition: all 0.2s ease-in-out 0s;
 			transition: all 0.2s ease-in-out 0s;
