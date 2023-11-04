@@ -116,7 +116,7 @@ ul {
 			}
 			&:last-child {
 				background: var(--blue);
-				color: #000;
+				color: #fff;
 				border: solid 1px var(--blue);
 				&:hover {
 					background: transparent;
@@ -231,7 +231,7 @@ ul {
 }
 
 .link-btn {
-	color: #000;
+	color: #fff;
 	background: var(--blue);
 	padding: .5rem 1rem;
 	font-size: 1.2rem;
@@ -886,7 +886,7 @@ section {
 	button {
 		cursor: pointer;
 		display: block;
-		color: #000;
+		color: #fff;
 		text-align: center;
 		-webkit-transition: all 0.2s ease-in-out 0s;
 		transition: all 0.2s ease-in-out 0s;
