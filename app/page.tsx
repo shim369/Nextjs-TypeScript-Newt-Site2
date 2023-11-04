@@ -22,14 +22,14 @@ export default function Home() {
     const rightDiv = document.querySelector('.right-div');
     const h2 = document.querySelector('.video-container h2');
     const contentsBox = document.querySelector('.contents-box');
-    const h3 = document.querySelector('.swiper-visual h3');
+    const swiperVisual = document.querySelector('.swiper-visual');
     const contact = document.querySelector('.contact');
   
     gsap.set(openingLogo, { autoAlpha: 0 });
     gsap.set(topLeftInner, { y: '30px', autoAlpha: 0 });
     gsap.set(topRight, { autoAlpha: 0 });
     gsap.set(contentsBox, { y: '30px', autoAlpha: 0 });
-    gsap.set(h3, { autoAlpha: 0 });
+    gsap.set(swiperVisual, { autoAlpha: 0 });
     gsap.set(contact, { y: '30px', autoAlpha: 0 });
   
     const openingLogoTimeline = gsap.timeline();
@@ -82,7 +82,7 @@ export default function Home() {
       start: 'top center',
       end: 'center center',
       onEnter: () => {
-        gsap.to(h3, { autoAlpha: 1, duration: 0.5, ease: 'power4.out' });
+        gsap.to(swiperVisual, { autoAlpha: 1, duration: 0.5, ease: 'power4.out' });
       },
     });
   
