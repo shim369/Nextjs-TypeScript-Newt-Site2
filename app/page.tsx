@@ -108,7 +108,7 @@ export default function Home() {
       <section className={'top-visual'}>
         <div className={'top-left'}>
           <div className={'top-left-inner'}>
-            <a href="/" className={'logo'}>NEXT TECH</a>
+            <a href="/" className={'logo'}>Web Development</a>
             <p>Welcome to NEXT TECH.<br />Your gateway to cutting-edge tech solutions.</p>
           </div>
         </div>
