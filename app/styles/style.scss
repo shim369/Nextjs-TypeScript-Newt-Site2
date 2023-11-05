@@ -993,8 +993,14 @@ section {
 	max-width: 800px;
 	margin: 5rem auto 0;
 	hr {
-		border-top: .5px solid var(--white);
-		margin: 2rem 0;
+		height: 40px;
+		background: repeating-linear-gradient(-45deg, rgb(255, 255, 255), rgb(255, 255, 255) 1px, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 29px);
+		border: none;
+		margin: 40px 0px 50px;
+	}
+	.blog-content {
+		background: #2a2929;
+		padding: 2rem;
 	}
 	h1 {
 		margin-bottom: 2rem;
