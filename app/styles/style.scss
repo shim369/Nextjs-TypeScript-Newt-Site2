@@ -332,6 +332,10 @@ ul {
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
 	border-radius: 50%;
+	opacity: 0;
+	&.active {
+		opacity: 1;
+	}
 	div {
 		position: relative;
 	}

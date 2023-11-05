@@ -1,30 +1,41 @@
 "use client";
 import Link from 'next/link'
-import 'font-awesome/css/font-awesome.min.css';
+import 'font-awesome/css/font-awesome.min.css'
 import { useEffect, useRef } from "react"
 
 export const Header = () => {
-	const navLinks = useRef<HTMLElement[]>([]);
-	const spNav = useRef<HTMLElement | null>(null);
+  const navLinks = useRef<HTMLElement[]>([]);
+  const spNav = useRef<HTMLElement | null>(null);
+  const navToggle = useRef<HTMLElement | null>(null);
+
   useEffect(() => {
     navLinks.current = Array.from(document.querySelectorAll(".pc-nav a"));
     spNav.current = document.querySelector(".sp-nav");
-  
-    if (navLinks.current.length > 0 && spNav.current) {
-      navLinks.current.forEach(link => {
+    navToggle.current = document.getElementById("nav-toggle");
+
+    if (navLinks.current.length > 0 && spNav.current && navToggle.current) {
+      navLinks.current.forEach((link) => {
         spNav.current!.appendChild(link.cloneNode(true));
       });
-    }
 
-    let navToggle = document.getElementById('nav-toggle');
-    let body = document.body;
+      let body = document.body;
 
-    if (navToggle) {
-      navToggle.addEventListener('click', function() {
-        body.classList.toggle('open');
+      navToggle.current.addEventListener("click", () => {
+        body.classList.toggle("open");
+      });
+
+      window.addEventListener("scroll", () => {
+        if (
+          document.body.scrollTop > 60 ||
+          document.documentElement.scrollTop > 60
+        ) {
+          navToggle.current!.classList.add("active");
+        } else {
+          navToggle.current!.classList.remove("active");
+        }
       });
     }
-  }, []); 
+  }, []);
 
   return (
     <>
