@@ -912,13 +912,16 @@ section {
 	justify-content: space-around;
 	max-width: 80%;
 	margin: 0 auto;
-	@media (max-width: 896px) {
+	@media (max-width: 639px) {
 		flex-direction: column;
 		max-width: 100%;
 	}
 	li {
 		width: 30%;
 		margin-bottom: 1.5rem;
+		@media (max-width: 896px) {
+			width: 48%;
+		}
 		@media (max-width: 639px) {
 			width: 100%;
 		}
