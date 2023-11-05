@@ -20,7 +20,6 @@ export default function Home() {
     const topRight = document.querySelector('.top-right');
     const leftDiv = document.querySelector('.left-div');
     const rightDiv = document.querySelector('.right-div');
-    const h2 = document.querySelector('.video-container h2');
     const contentsBox = document.querySelector('.contents-box');
     const swiperVisual = document.querySelector('.swiper-visual');
     const contact = document.querySelector('.contact');
@@ -49,22 +48,6 @@ export default function Home() {
       onEnter: () => {
         gsap.to(leftDiv, { width: 0, duration: 0.5 });
         gsap.to(rightDiv, { width: 0, duration: 0.5 });
-        gsap.to(h2, { autoAlpha: 1, duration: 0, delay: 0.5 });
-      },
-      onEnterBack: () => {
-        gsap.to(leftDiv, { width: 0, duration: 0.5 });
-        gsap.to(rightDiv, { width: 0, duration: 0.5 });
-        gsap.to(h2, { autoAlpha: 1, duration: 0, delay: 0.5 });
-      },
-      onLeave: () => {
-        gsap.to(leftDiv, { width: '50%', duration: 0.5 });
-        gsap.to(rightDiv, { width: '50%', duration: 0.5 });
-        gsap.to(h2, { autoAlpha: 0, duration: 0, delay: 0.5 });
-      },
-      onLeaveBack: () => {
-        gsap.to(leftDiv, { width: '50%', duration: 0.5 });
-        gsap.to(rightDiv, { width: '50%', duration: 0.5 });
-        gsap.to(h2, { autoAlpha: 0, duration: 0, delay: 0.5 });
       },
     });
 
@@ -117,11 +100,11 @@ export default function Home() {
         </div>
       </section>
       <section className={'video-container'}>
-        <div className="left-div"></div>
-        <div className="right-div"></div>
-        <h2>
+        <h2 className={'video-text'}>
           Increasing Business Velocity <br />through Technology
         </h2>
+        <div className="left-div"></div>
+        <div className="right-div"></div>
         <video
           className={'video'}
           ref={videoRef}
@@ -169,7 +152,7 @@ export default function Home() {
       <section id="home" className={'swiper-visual'}>
           <div className={'swiper-visual-inner'}>
             <SwiperBox />
-            <h3>Would you like to try the latest technology?</h3>
+            <h3>Would you like to try <br className={'spBr'} />the latest technology?</h3>
           </div>
       </section>
       <section className={'contact'}>

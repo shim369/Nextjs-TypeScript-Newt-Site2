@@ -62,7 +62,7 @@ ul {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: var(--black);
+	background: var(--blue);
 	z-index: 99999;
 	.opening-logo {
 		font-family: var(--font-tulpen_One);
@@ -588,7 +588,10 @@ ul {
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	padding: 1rem;
+	font-size: .8rem;
+	padding: .8rem;
+	background: var(--blue);
+	color: var(--white);
 }
 
 section {
@@ -1086,8 +1089,8 @@ section {
 
 .swiper-visual {
 	width: 100%;
-	margin-top: 3rem;
-	margin-bottom: 2rem;
+	margin-top: 2rem;
+	// margin-bottom: 2rem;
 	.swiper-visual-inner {
 		overflow: hidden;
 		width: 100%;
@@ -1109,15 +1112,18 @@ section {
 		h3 {
 			position: absolute;
 			z-index: 3;
-			font-size: 5rem;
+			font-size: 8rem;
 			text-align: center;
 			font-family: var(--font-tulpen_One);
 			color: var(--white);
 			@media (max-width: 896px) {
-				font-size: 4rem;
+				font-size: 3.5rem;
 			}
+		}
+		.spBr {
+			display: none;
 			@media (max-width: 639px) {
-				font-size: 3rem;
+				display: block;
 			}
 		}
 	}
@@ -1167,18 +1173,18 @@ section {
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 50%;
+		width: 40%;
 		height: 100%;
-		background-color: rgba(0, 0, 0, .8);
+		background-color: rgba(0, 0, 0, 1);
 		z-index: 3;
 	}
 	.right-div {
 		position: absolute;
 		top: 0;
 		right: 0;
-		width: 50%;
+		width: 40%;
 		height: 100%;
-		background-color: rgba(0, 0, 0, .8);
+		background-color: rgba(0, 0, 0, 1);
 		z-index: 3;
 	}
 	.video {
@@ -1190,19 +1196,20 @@ section {
 		z-index: 1;
 		object-fit: cover;
 	}
-	h2 {
+	.video-text {
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		text-align: center;
 		color: var(--white);
-		z-index: 2;
+		z-index: 4;
 		font-family: var(--font-tulpen_One);
-		font-size: 5rem;
-		opacity: 0;
+		font-size: 8rem;
+		width: 100%;
+		opacity: 1;
 		@media (max-width: 896px) {
-			font-size: 4rem;
+			font-size: 3.5rem;
 		}
 	}
 }
