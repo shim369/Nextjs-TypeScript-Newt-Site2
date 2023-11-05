@@ -590,7 +590,7 @@ ul {
 	position: relative;
 	font-size: .8rem;
 	padding: .8rem;
-	background: var(--blue);
+	background: rgb(2, 105, 126);
 	color: var(--white);
 }
 
@@ -1004,7 +1004,7 @@ section {
 }
 
 .qa-list {
-	width: 80%;
+	width: 60%;
 	margin: 0 auto;
 	@media (max-width: 896px) {
 		width: 100%;
@@ -1015,7 +1015,7 @@ section {
 		cursor: pointer;
 		border: 1px solid var(--blue);
 		@media (max-width: 896px) {
-			margin: .8rem 0 0;
+			margin: 2rem 0 0;
 		}
 		&:first-child {
 			margin-top: 0;
