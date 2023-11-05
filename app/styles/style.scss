@@ -62,6 +62,7 @@ ul {
 	background: url(/top-v.webp);
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: center;
 	z-index: 99997;
 	display: flex;
 	align-items: center;
@@ -606,7 +607,7 @@ ul {
 	position: relative;
 	font-size: .8rem;
 	padding: .8rem;
-	background: rgb(2, 105, 126);
+	background: rgb(40 40 40);
 	color: var(--white);
 }
 
@@ -657,9 +658,12 @@ section {
 .tbl-title {
 	font-family: var(--font-tulpen_One);
 	font-size: 2rem;
-	margin-bottom: .5rem;
+	margin-bottom: 2rem;
 	margin-left: .5rem;
 	text-align: center;
+	&.op-title {
+		margin-top: 3rem;
+	}
 }
 
 .services {
@@ -803,7 +807,7 @@ section {
 	position: relative;
 	margin: 2.5rem auto;
 	width: 80%;
-	border: 1px solid #036478;
+	border: 1px solid #3d3f3f;
 	padding: 1rem;
 	@media (max-width: 896px) {
 		width: 90%;

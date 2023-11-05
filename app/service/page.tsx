@@ -77,7 +77,7 @@ export default function Page() {
         </li>
       </ul>
 
-      <h3 className={'tbl-title'}>Additional Options</h3>
+      <h3 className={'tbl-title op-title'}>Additional Options</h3>
       <table className={'tbl2'}>
         <tbody>
         <tr>
