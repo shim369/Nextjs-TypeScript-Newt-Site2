@@ -1005,7 +1005,7 @@ section {
 	}
 	dl {
 		position: relative;
-		margin: 1.5rem 0 0;
+		margin: 2rem 0 0;
 		cursor: pointer;
 		border: 1px solid var(--blue);
 		@media (max-width: 896px) {
@@ -1025,7 +1025,7 @@ section {
 		dt {
 			position: relative;
 			padding: 1rem 1.5rem 1rem 3rem;
-			background-color: var(--blue);
+			background: var(--blue);
 			font-size: 1rem;
 			-webkit-transition: all 0.2s ease-in-out 0s;
 			transition: all 0.2s ease-in-out 0s;
