@@ -1262,3 +1262,11 @@ section {
 	  width: 0;
 	}
 }
+
+.link-text {
+	font-family: var(--font-tulpen_One);
+	font-size: 1.3rem;
+	&:hover {
+		opacity: .8;
+	}
+}

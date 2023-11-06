@@ -9,7 +9,7 @@ export default function Page() {
       </div>
       <div className={'container-inner'}>
       <p className={'under-read'}>お問い合わせありがとうございました。</p>
-        <Link href="/contact">Back to Previous Page</Link>
+        <Link href="/contact" className={'link-text'}>Back to Previous Page</Link>
       </div>
     </section>
   )
