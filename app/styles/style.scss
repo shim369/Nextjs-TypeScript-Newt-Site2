@@ -67,6 +67,9 @@ ul {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	@media (max-width: 896px) {
+		background-image: none;
+	}
 	&::before {
 		position: absolute;
 		content: "";
@@ -109,6 +112,15 @@ ul {
 	}
 	.pc-nav {
 		display: flex;
+		position: relative;
+		&.active {
+			position: fixed;
+			z-index: 5;
+			background: rgba(0,0,0,.8);
+			a {
+				padding: 0.5rem 1rem;
+			}
+		}
 		@media (max-width: 896px) {
 			display: none;
 		}
@@ -346,9 +358,9 @@ ul {
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
 	border-radius: 50%;
-	opacity: 0;
-	&.active {
-		opacity: 1;
+	display: none;
+	@media (max-width: 896px) {
+		display: block;
 	}
 	div {
 		position: relative;

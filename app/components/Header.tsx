@@ -5,10 +5,12 @@ import { useEffect, useRef } from "react"
 
 export const Header = () => {
   const navLinks = useRef<HTMLElement[]>([]);
+  const pcNav = useRef<HTMLElement | null>(null);
   const spNav = useRef<HTMLElement | null>(null);
   const navToggle = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
+    pcNav.current = document.querySelector(".pc-nav");
     navLinks.current = Array.from(document.querySelectorAll(".pc-nav a"));
     spNav.current = document.querySelector(".sp-nav");
     navToggle.current = document.getElementById("nav-toggle");
@@ -29,9 +31,9 @@ export const Header = () => {
           document.body.scrollTop > 60 ||
           document.documentElement.scrollTop > 60
         ) {
-          navToggle.current!.classList.add("active");
+          pcNav.current!.classList.add("active");
         } else {
-          navToggle.current!.classList.remove("active");
+          pcNav.current!.classList.remove("active");
         }
       });
     }
