@@ -1,9 +1,9 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'About'
+  title: 'ABOUT'
 }
 
 export default function Page() {

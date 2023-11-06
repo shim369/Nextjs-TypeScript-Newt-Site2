@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Service'
+  title: 'SERVICE'
 }
 
 export default function Page() {

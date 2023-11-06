@@ -1,9 +1,9 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getArticles } from '@/lib/newt'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Blog'
+  title: 'BLOG'
 }
 
 export default async function Page() {

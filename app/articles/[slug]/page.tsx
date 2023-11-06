@@ -1,6 +1,10 @@
 import { getArticles, getArticleBySlug } from '@/lib/newt'
 import type { Article } from '@/types/article'
+import type { Metadata } from 'next'
 
+export const metadata: Metadata = {
+  title: 'BLOG'
+}
 
 type Props = {
   params: {

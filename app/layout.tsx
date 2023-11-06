@@ -18,7 +18,10 @@ const lato = Lato({
 })
 
 export const metadata: Metadata = {
-  title: 'NEXT TECH',
+  title: {
+    default: 'NEXT TECH',
+    template: '%s | NEXT TECH',
+  },
   description: 'NEXT TECH',
 }
 
