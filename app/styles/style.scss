@@ -554,7 +554,7 @@ ul {
 			-webkit-transition: 0.4s;
 			transition: 0.4s;
 			&:nth-child(1) {
-				top: 25px;
+				top: 10px;
 				-webkit-transform: rotate(45deg);
 						transform: rotate(45deg);
 				-webkit-transition: 0.4s;
@@ -564,7 +564,7 @@ ul {
 				display: none;
 			}
 			&:nth-child(3) {
-				top: 25px;
+				top: 10px;
 				width: 100%;
 				-webkit-transform: rotate(-45deg);
 						transform: rotate(-45deg);
