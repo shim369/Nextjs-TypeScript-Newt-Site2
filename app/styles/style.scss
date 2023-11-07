@@ -581,14 +581,14 @@ ul {
 							transform: rotate(45deg);
 					-webkit-transition: 0.4s;
 					transition: 0.4s;
-					top: 10px;
+					// top: 10px;
 					width: 100%;
 				}
 				&:nth-child(2) {
 					display: none;
 				}
 				&:nth-child(3) {
-					top: 10px;
+					// top: 10px;
 					width: 100%;
 					-webkit-transform: rotate(-45deg);
 							transform: rotate(-45deg);
