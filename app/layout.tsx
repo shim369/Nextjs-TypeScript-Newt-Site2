@@ -3,6 +3,10 @@ import './styles/style.scss'
 import type { Metadata } from 'next'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
+
 
 const tulpen_one = Tulpen_One({
   weight: '400',
