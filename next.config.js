@@ -1,6 +1,9 @@
 const path = require('path');
 
 module.exports = {
+  experimental: {
+    appDir: true,
+  },
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     config.module.rules.push({
     test: /\.(mp4|webm)$/,
