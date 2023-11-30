@@ -20,53 +20,66 @@ export default function Home() {
     const videoRef = useRef<HTMLVideoElement>(null);
 
     useEffect(() => {
-      Gsap.set('#openingLogo', { autoAlpha: 0 });
-      Gsap.set('#topLeftInner', { y: '30px', autoAlpha: 0 });
-      Gsap.set('#topRight', { autoAlpha: 0 });
+      const openingLogo = document.getElementById('openingLogo');
+      const openingAnimation = document.getElementById('openingAnimation');
+      const topLeftInner = document.getElementById('topLeftInner');
+      const topRight = document.getElementById('topRight');
+      Gsap.set(openingLogo, { autoAlpha: 0 });
+      Gsap.set(topLeftInner, { y: '30px', autoAlpha: 0 });
+      Gsap.set(topRight, { autoAlpha: 0 });
 
       const openingLogoTimeline = Gsap.timeline();
     
-      openingLogoTimeline.to('#openingLogo', { autoAlpha: 1, duration: 0.5, delay: 0.5 });
-      openingLogoTimeline.to('#openingAnimation', { autoAlpha: 0, duration: 0.5, delay: 1 });
-      openingLogoTimeline.to('#topLeftInner', { y: '0%', autoAlpha: 1, duration: 0.5, delay: 1, ease: 'power4.out' });
-      openingLogoTimeline.to('#topRight', { autoAlpha: 1, duration: 1, delay: 0.5, ease: 'power4.out' }, '-=0.5');
+      if (openingLogo && openingAnimation && topLeftInner && topRight) {
+        openingLogoTimeline.to(openingLogo, { autoAlpha: 1, duration: 0.5, delay: 0.5 });
+        openingLogoTimeline.to(openingAnimation, { autoAlpha: 0, duration: 0.5, delay: 1 });
+        openingLogoTimeline.to(topLeftInner, { y: '0%', autoAlpha: 1, duration: 0.5, delay: 1, ease: 'power4.out' });
+        openingLogoTimeline.to(topRight, { autoAlpha: 1, duration: 1, delay: 0.5, ease: 'power4.out' }, '-=0.5');
+      }
     })
 
     useEffect(() => {
-      Gsap.set('#contentsBox', { y: '30px', autoAlpha: 0 });
+      const contentsBox = document.getElementById('contentsBox');
+      Gsap.set(contentsBox, { y: '30px', autoAlpha: 0 });
 
       ScrollTrigger.create({
-        trigger: '#contentsBox',
+        trigger: contentsBox,
         start: 'top center', 
         end: 'center center',
         onEnter: () => {
-          Gsap.to('#contentsBox', { autoAlpha: 1, duration: 0.5, delay: 0.2, ease: 'power4.out' });
+          if (contentsBox) {
+            Gsap.to(contentsBox, { autoAlpha: 1, duration: 0.5, delay: 0.2, ease: 'power4.out' });
+          }
         },
       });
     });
 
     useEffect(() => {
-      Gsap.set('#swiperVisual', { autoAlpha: 0 });
+      const swiperVisual = document.getElementById('swiperVisual');
+      Gsap.set(swiperVisual, { autoAlpha: 0 });
       ScrollTrigger.create({
-        trigger: '#swiperVisual',
+        trigger: swiperVisual,
         start: 'top center',
         end: 'center center',
         onEnter: () => {
-          Gsap.to('#swiperVisual', { autoAlpha: 1, duration: 0.5, ease: 'power4.out' });
+          if (swiperVisual) {
+            Gsap.to(swiperVisual, { autoAlpha: 1, duration: 0.5, ease: 'power4.out' });
+          }
         },
       });
     });
 
     useEffect(() => {
+      const videoContainer = document.getElementById('videoContainer');
+      const leftDiv = document.getElementById('leftDiv');
+      const rightDiv = document.getElementById('rightDiv');
+
       Gsap.to(videoRef.current, {
         scrollTrigger: {
-          trigger: '#videoContainer',
+          trigger: videoContainer,
           start: 'top center',
           end: 'bottom center',
           onEnter: () => {
-            const leftDiv = document.getElementById('leftDiv');
-            const rightDiv = document.getElementById('rightDiv');
-        
             if (leftDiv && rightDiv) {
               Gsap.to(leftDiv, { width: 0, duration: 0.5 });
               Gsap.to(rightDiv, { width: 0, duration: 0.5 });
@@ -81,14 +94,17 @@ export default function Home() {
     }, [videoRef]);
 
     useEffect(() => {
-      Gsap.set('#contact', { y: '30px', autoAlpha: 0 });
+      const contact = document.getElementById('contact');
+      Gsap.set(contact, { y: '30px', autoAlpha: 0 });
   
       ScrollTrigger.create({
-        trigger: '#contact',
+        trigger: contact,
         start: 'top center',
         end: 'center center',
         onEnter: () => {
-          Gsap.to('#contact', { y: '0%', autoAlpha: 1, duration: 0.5, delay: 0.2, ease: 'power4.out' });
+          if (contact) {
+            Gsap.to(contact, { y: '0%', autoAlpha: 1, duration: 0.5, delay: 0.2, ease: 'power4.out' });
+          }
         },
       });
     });
