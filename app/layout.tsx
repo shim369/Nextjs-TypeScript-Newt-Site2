@@ -37,7 +37,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${tulpen_one.variable} ${lato.variable}`}>
-      <body>
+      <body suppressHydrationWarning={true}>
         <Header />
         <main className={styles.main}>
           <div className={styles.container}>
