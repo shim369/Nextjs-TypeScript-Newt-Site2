@@ -64,8 +64,13 @@ export default function Home() {
           start: 'top center',
           end: 'bottom center',
           onEnter: () => {
-            Gsap.to('#leftDiv', { width: 0, duration: 0.5 });
-            Gsap.to('#rightDiv', { width: 0, duration: 0.5 });
+            const leftDiv = document.getElementById('leftDiv');
+            const rightDiv = document.getElementById('rightDiv');
+        
+            if (leftDiv && rightDiv) {
+              Gsap.to(leftDiv, { width: 0, duration: 0.5 });
+              Gsap.to(rightDiv, { width: 0, duration: 0.5 });
+            }
           },
         },
       });
