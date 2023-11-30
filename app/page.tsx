@@ -17,69 +17,76 @@ Gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
 
-  const videoRef = useRef<HTMLVideoElement>(null);
+    const videoRef = useRef<HTMLVideoElement>(null);
 
-  useEffect(() => {
-    Gsap.set('.openingLogo', { autoAlpha: 0 });
-    Gsap.set('.topLeftInner', { y: '30px', autoAlpha: 0 });
-    Gsap.set('.topRight', { autoAlpha: 0 });
+    useEffect(() => {
+      Gsap.set('.openingLogo', { autoAlpha: 0 });
+      Gsap.set('.topLeftInner', { y: '30px', autoAlpha: 0 });
+      Gsap.set('.topRight', { autoAlpha: 0 });
 
-    const openingLogoTimeline = Gsap.timeline();
-  
-    openingLogoTimeline.to('.openingLogo', { autoAlpha: 1, duration: 0.5, delay: 0.5 });
-    openingLogoTimeline.to('.openingAnimation', { autoAlpha: 0, duration: 0.5, delay: 1 });
-    openingLogoTimeline.to('.topLeftInner', { y: '0%', autoAlpha: 1, duration: 0.5, delay: 1, ease: 'power4.out' });
-    openingLogoTimeline.to('.topRight', { autoAlpha: 1, duration: 1, delay: 0.5, ease: 'power4.out' }, '-=0.5');
-  })
+      const openingLogoTimeline = Gsap.timeline();
+    
+      openingLogoTimeline.to('.openingLogo', { autoAlpha: 1, duration: 0.5, delay: 0.5 });
+      openingLogoTimeline.to('.openingAnimation', { autoAlpha: 0, duration: 0.5, delay: 1 });
+      openingLogoTimeline.to('.topLeftInner', { y: '0%', autoAlpha: 1, duration: 0.5, delay: 1, ease: 'power4.out' });
+      openingLogoTimeline.to('.topRight', { autoAlpha: 1, duration: 1, delay: 0.5, ease: 'power4.out' }, '-=0.5');
+    })
 
-  useEffect(() => {
-    Gsap.set('.contentsBox', { y: '30px', autoAlpha: 0 });
-    Gsap.set('.swiperVisual', { autoAlpha: 0 });
-    Gsap.set('.contact', { y: '30px', autoAlpha: 0 });
-  
-    Gsap.to(videoRef.current, {
-      scrollTrigger: {
-        trigger: '.videoContainer',
-        start: 'top center',
-        end: 'bottom center',
-        onEnter: () => {
-          Gsap.to('.leftDiv', { width: 0, duration: 0.5 });
-          Gsap.to('.rightDiv', { width: 0, duration: 0.5 });
-        },
-      },
-    });
+    useEffect(() => {
+      Gsap.set('.contentsBox', { y: '30px', autoAlpha: 0 });
 
-    ScrollTrigger.create({
+      ScrollTrigger.create({
         trigger: '.contentsBox',
         start: 'top center', 
         end: 'center center',
         onEnter: () => {
           Gsap.to('.contentsBox', { autoAlpha: 1, duration: 0.5, delay: 0.2, ease: 'power4.out' });
         },
+      });
     });
-    
-    ScrollTrigger.create({
-      trigger: '.swiperVisual',
-      start: 'top center',
-      end: 'center center',
-      onEnter: () => {
-        Gsap.to('.swiperVisual', { autoAlpha: 1, duration: 0.5, ease: 'power4.out' });
-      },
+
+    useEffect(() => {
+      Gsap.set('.swiperVisual', { autoAlpha: 0 });
+      ScrollTrigger.create({
+        trigger: '.swiperVisual',
+        start: 'top center',
+        end: 'center center',
+        onEnter: () => {
+          Gsap.to('.swiperVisual', { autoAlpha: 1, duration: 0.5, ease: 'power4.out' });
+        },
+      });
     });
+
+    useEffect(() => {
+      Gsap.to(videoRef.current, {
+        scrollTrigger: {
+          trigger: '.videoContainer',
+          start: 'top center',
+          end: 'bottom center',
+          onEnter: () => {
+            Gsap.to('.leftDiv', { width: 0, duration: 0.5 });
+            Gsap.to('.rightDiv', { width: 0, duration: 0.5 });
+          },
+        },
+      });
+
+      if (videoRef.current) {
+        videoRef.current?.play();
+      }
+    }, [videoRef]);
+
+    useEffect(() => {
+      Gsap.set('.contact', { y: '30px', autoAlpha: 0 });
   
-    ScrollTrigger.create({
-      trigger: '.contact',
-      start: 'top center',
-      end: 'center center',
-      onEnter: () => {
-        Gsap.to('.contact', { y: '0%', autoAlpha: 1, duration: 0.5, delay: 0.2, ease: 'power4.out' });
-      },
+      ScrollTrigger.create({
+        trigger: '.contact',
+        start: 'top center',
+        end: 'center center',
+        onEnter: () => {
+          Gsap.to('.contact', { y: '0%', autoAlpha: 1, duration: 0.5, delay: 0.2, ease: 'power4.out' });
+        },
+      });
     });
-    if (videoRef.current) {
-      videoRef.current?.play();
-    }
-  
-  }, [videoRef]);
 
   return (
     <>
