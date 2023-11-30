@@ -1,6 +1,6 @@
 import { Tulpen_One, Lato } from "next/font/google"
 import styles from './styles/css/page.module.css'
-import './styles/css/global.css'
+import './styles/css/globals.css'
 import type { Metadata } from 'next'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
