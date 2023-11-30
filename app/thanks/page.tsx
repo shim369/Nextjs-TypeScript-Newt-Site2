@@ -1,16 +1,16 @@
 "use client";
 import Link from 'next/link'
-import '../styles/css/layout.css'
+import styles from '../styles/css/page.module.css'
 
 export default function Page() {
   return (
     <section id="contact">
-      <div className='underInner'>
+      <div className={styles.underInner}>
         <h2>CONTACT</h2>
       </div>
-      <div className='containerInner'>
-      <p className='underRead'>Thank you for your inquiry.</p>
-        <Link href="/contact" className='linkText'>Back to Previous Page</Link>
+      <div className={styles.containerInner}>
+      <p className={styles.underRead}>Thank you for your inquiry.</p>
+        <Link href="/contact" className={styles.linkText}>Back to Previous Page</Link>
       </div>
     </section>
   )

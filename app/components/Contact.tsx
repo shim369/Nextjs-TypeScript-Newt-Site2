@@ -1,7 +1,7 @@
 "use client";
 import { useRouter } from 'next/navigation'
 import type { FormEvent } from 'react'
-import '../styles/css/layout.css'
+import styles from '../styles/css/page.module.css'
 
 export default function Contact() {
   const router = useRouter()
@@ -52,21 +52,21 @@ export default function Contact() {
     }
   }
   return (
-      <div className='containerInner'>
+      <div className={styles.containerInner}>
       
-      <form onSubmit={onSubmit} className='form'>
+      <form onSubmit={onSubmit} className={styles.form}>
         <dl>
           <dt><label htmlFor="name">Name*</label></dt>
           <dd>
-            <input id="name" name="name" type="text" className='textarea' autoComplete="name" required />
+            <input id="name" name="name" type="text" className={styles.textarea} autoComplete="name" required />
           </dd>
           <dt><label htmlFor="email">Email*</label></dt>
           <dd>
-            <input id="email" name="email" type="email" className='textarea' autoComplete="email" required />
+            <input id="email" name="email" type="email" className={styles.textarea} autoComplete="email" required />
           </dd>
           <dt><label htmlFor="message">Message*</label></dt>
           <dd>
-            <textarea id="message" name="message" className='textarea' required />
+            <textarea id="message" name="message" className={styles.textarea} required />
           </dd>
         </dl>
         <button type="submit">Submit</button>

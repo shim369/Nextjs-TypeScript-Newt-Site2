@@ -294,7 +294,7 @@
 	}
 }
 
-#jsNavToggle {
+.jsNavToggle {
 	display: block;
 	position: fixed;
 	right: 0;
@@ -360,7 +360,7 @@
 	}
 }
 
-#jsSpNav {
+.jsSpNav {
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -497,7 +497,7 @@
 
 .open {
 	overflow: hidden;
-	#jsNavToggle {
+	.jsNavToggle {
 		span {
 			-webkit-transition: 0.4s;
 			transition: 0.4s;
@@ -546,7 +546,7 @@
 			}
 		}
 	}
-	#jsSpNav {
+	.jsSpNav {
 		visibility: visible;
 		opacity: 1;
 		z-index: 990;

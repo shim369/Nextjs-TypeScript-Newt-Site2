@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import '../styles/css/layout.css'
+import styles from '../styles/css/page.module.css'
 
 export const Faq = () => {
     const [openQuestions, setOpenQuestions] = useState<number[]>([]);
@@ -13,9 +13,9 @@ export const Faq = () => {
       }
     };
     return (
-    <div className='qaList'>
+    <div className={styles.qaList}>
         {faqData.map((faq, index) => (
-          <dl className='qa' key={index}>
+          <dl className={styles.qa} key={index}>
             <dt onClick={() => handleToggleQuestion(index)} className={openQuestions.includes(index) ? 'open' : ''}>
               {faq.question}
             </dt>

@@ -1,5 +1,5 @@
 import { Tulpen_One, Lato } from "next/font/google"
-import './styles/css/layout.css'
+import styles from './styles/css/page.module.css'
 import './styles/css/global.css'
 import type { Metadata } from 'next'
 import { Header } from './components/Header'
@@ -38,13 +38,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${tulpen_one.variable} ${lato.variable}`}>
       <body>
-          <Header />
-          <main className='main'>
-            <div className='container'>
+        <Header />
+        <main className={styles.main}>
+          <div className={styles.container}>
             {children}
-            </div>
-          </main>
-          <Footer />
+          </div>
+        </main>
+        <Footer />
       </body>
     </html>
   )

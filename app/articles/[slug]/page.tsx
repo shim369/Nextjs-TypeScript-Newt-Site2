@@ -1,7 +1,7 @@
 import { getArticles, getArticleBySlug } from '@/lib/newt'
 import type { Article } from '@/types/article'
 import type { Metadata } from 'next'
-import '../../styles/css/layout.css'
+import styles from '../../styles/css/page.module.css'
 
 type Props = {
   params: {
@@ -31,14 +31,14 @@ export default async function Article({ params }: Props) {
 
   return (
     <section>
-      <div className='underInner'>
+      <div className={styles.underInner}>
         <h2>BLOG</h2>
       </div>
-      <div className='blogDetail'>
+      <div className={styles.blogDetail}>
         <hr />
-        <div className='blogContent'>
+        <div className={styles.blogContent}>
           <h1>{article.title}</h1>
-          <div className='date'>
+          <div className={styles.date}>
             {new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(new Date(article.date))}
           </div>
           <div dangerouslySetInnerHTML={{ __html: article.body }} />

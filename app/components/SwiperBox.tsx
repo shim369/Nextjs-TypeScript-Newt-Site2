@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
-import '../styles/css/layout.css'
+import styles from '../styles/css/page.module.css'
 
 const images = [
     `/1.webp`,
@@ -21,7 +21,7 @@ const SwiperBox = () => {
                 autoplay
                 effect={'fade'}
                 modules={[Autoplay, EffectFade]}
-                className='swiperBox'
+                className={styles.swiperBox}
                 loop={true}
             >
                 {images.map((src: string, index: number) => {
