@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { Faq } from '../components/Faq';
+import { Faq } from '../components/Faq'
+import '../styles/css/layout.css'
 
 export const metadata: Metadata = {
   title: 'FAQ'
@@ -9,11 +10,11 @@ export default function Page() {
   return (
     <>
     <section id="faq">
-      <div className={'under-inner'}>
+      <div className='underInner'>
         <h2>FAQ</h2>
       </div>
-      <div className={'container-inner'}>
-      <p className={'under-read'}>If you have any inquiries, please don&apos;t hesitate to contact me.</p>
+      <div className='containerInner'>
+      <p className='underRead'>If you have any inquiries, please don&apos;t hesitate to contact me.</p>
         <Faq />
       </div>
     </section>

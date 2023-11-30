@@ -4,49 +4,48 @@ import { useEffect, useRef } from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faBlog } from '@fortawesome/free-solid-svg-icons'
+import '../styles/css/layout.css'
 
 export const Header = () => {
-  const navLinks = useRef<HTMLElement[]>([]);
-  const pcNav = useRef<HTMLElement | null>(null);
-  const spNav = useRef<HTMLElement | null>(null);
-  const navToggle = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
-    pcNav.current = document.querySelector(".pc-nav");
-    navLinks.current = Array.from(document.querySelectorAll(".pc-nav a"));
-    spNav.current = document.querySelector(".sp-nav");
-    navToggle.current = document.getElementById("nav-toggle");
+    const pcNav = document.querySelector(".pcNav");
+    const navLinks = Array.from(document.querySelectorAll(".pcNav a"));
+    const spNav = document.querySelector(".spNav");
+    const navToggle = document.getElementById("jsNavToggle");
 
-    if (navLinks.current.length > 0 && spNav.current && navToggle.current) {
-      navLinks.current.forEach((link) => {
-        spNav.current!.appendChild(link.cloneNode(true));
+    if (navLinks.length > 0 && spNav && navToggle) {
+      navLinks.forEach((link) => {
+        spNav.appendChild(link.cloneNode(true));
       });
 
       let body = document.body;
 
-      navToggle.current.addEventListener("click", () => {
+      navToggle.addEventListener("click", () => {
         body.classList.toggle("open");
       });
 
-      window.addEventListener("scroll", () => {
-        if (
-          document.body.scrollTop > 60 ||
-          document.documentElement.scrollTop > 60
-        ) {
-          pcNav.current!.classList.add("active");
-        } else {
-          pcNav.current!.classList.remove("active");
-        }
-      });
+      if(pcNav) { 
+        window.addEventListener("scroll", () => {
+          if(
+            document.body.scrollTop > 60 ||
+            document.documentElement.scrollTop > 60
+          ) {
+            pcNav.classList.add("active");
+          } else {
+            pcNav.classList.remove("active");
+          }
+        });
+      }
     }
   }, []);
 
   return (
     <>
-    <header className={'header'}>
-        <div className={'header-inner'}>
-            <Link href="/" className={'header-logo'}>NEXT TECH</Link>
-            <nav className={'pc-nav'}>
+    <header className='header'>
+        <div className='headerInner'>
+            <Link href="/" className='headerLogo'>NEXT TECH</Link>
+            <nav className='pcNav'>
                 <Link href="/">TOP</Link>
                 <Link href="/about">ABOUT</Link>
                 <Link href="/service">SERVICE</Link>
@@ -55,25 +54,25 @@ export const Header = () => {
                 <Link href="/contact">CONTACT</Link>
             </nav>
         </div>
-        <ul className={'sns-link'}>
+        <ul className='snsLink'>
           <li><Link href="https://github.com/shim369" target="_blank" title="GitHub"><FontAwesomeIcon icon={faGithub} /></Link></li>
           <li><Link href="https://sohtani.pythonanywhere.com/" target="_blank" title="TECH BLOG"><FontAwesomeIcon icon={faBlog} /></Link></li>
         </ul>
     </header>
-    <div id="nav-toggle">
+    <div id="jsNavToggle">
       <div>
         <span></span>
         <span></span>
         <span></span>
       </div>
     </div>
-    <div id="sp-nav">
-      <div className={'sp-nav-inner'}>
-        <div className={'sp-nav-links'}>
-            <p className={'logo'}>
+    <div id="jsSpNav">
+      <div className='spNavInner'>
+        <div className='spNavLinks'>
+            <p className='logo'>
               <Link href="/">NEXT TECH</Link>
             </p>
-            <nav className={'sp-nav'}></nav>
+            <nav className='spNav'></nav>
         </div>
       </div>
     </div>

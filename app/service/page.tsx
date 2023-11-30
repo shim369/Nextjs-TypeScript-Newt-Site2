@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import '../styles/css/layout.css'
 
 export const metadata: Metadata = {
   title: 'SERVICE'
@@ -7,16 +8,16 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <section id="service">
-    <div className={'under-inner'}>
+    <div className='underInner'>
       <h2>SERVICE</h2>
     </div>
-      <div className={'container-inner'}>
-      <p className={'under-read'}>The prices listed above are all reference prices and may vary depending on the project&apos;s scope and requirements.<br />For more details, please inquire.</p>
+      <div className='containerInner'>
+      <p className='underRead'>The prices listed above are all reference prices and may vary depending on the project&apos;s scope and requirements.<br />For more details, please inquire.</p>
       
-      <ul className={'services'}>
+      <ul className='services'>
         <li>
-          <h3 className={'tbl-title'}>1. Website Development</h3>
-          <table className={'tbl'}>
+          <h3 className='tblTitle'>1. Website Development</h3>
+          <table className='tbl'>
             <tbody>
             <tr>
               <th>Technologies</th>
@@ -30,8 +31,8 @@ export default function Page() {
           </table>
         </li>
         <li>
-          <h3 className={'tbl-title'}>2. Web Application Development</h3>
-          <table className={'tbl'}>
+          <h3 className='tblTitle'>2. Web Application Development</h3>
+          <table className='tbl'>
             <tbody>
             <tr>
               <th>Technologies</th>
@@ -45,8 +46,8 @@ export default function Page() {
           </table>
         </li>
         <li>
-          <h3 className={'tbl-title'}>3. CMS Construction</h3>
-          <table className={'tbl'}>
+          <h3 className='tblTitle'>3. CMS Construction</h3>
+          <table className='tbl'>
             <tbody>
             <tr>
               <th>Technologies</th>
@@ -60,8 +61,8 @@ export default function Page() {
           </table>
         </li>
         <li>
-          <h3 className={'tbl-title'}>4. Design & UI/UX</h3>
-          <table className={'tbl'}>
+          <h3 className='tblTitle'>4. Design & UI/UX</h3>
+          <table className='tbl'>
             <tbody>
             <tr>
               <th>Technologies</th>
@@ -76,8 +77,8 @@ export default function Page() {
         </li>
       </ul>
 
-      <h3 className={'tbl-title op-title'}>Additional Options</h3>
-      <table className={'tbl2'}>
+      <h3 className='tblTitle opTitle'>Additional Options</h3>
+      <table className='tbl2'>
         <tbody>
         <tr>
           <th>

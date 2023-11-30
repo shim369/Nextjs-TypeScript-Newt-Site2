@@ -29,7 +29,6 @@
   },
   "devDependencies": {
     "@types/aos": "^3.0.5",
-    "file-loader": "^6.2.0",
-    "sass": "^1.66.1"
+    "file-loader": "^6.2.0"
   }
 }
