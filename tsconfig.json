@@ -26,16 +26,25 @@
       "@/*": [
         "./*"
       ]
-    }
+    },
+    "types": [
+      "node",
+      "jest"
+    ]
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "next.config.js"
+    "next.config.js",
+    "jest.config.js"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "out",
+    ".next",
+    "**/*.test.ts",
+    "**/*.test.tsx"
   ]
 }

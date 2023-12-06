@@ -5,6 +5,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faBlog } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link';
 import styles from '../styles/page.module.scss';
+import { Logo } from './Logo';
 
 export const Header = () => {
   const [isNavActive, setIsNavActive] = useState(false);
@@ -63,7 +64,9 @@ export const Header = () => {
     <>
       <header className={`${styles.header} ${isNavActive ? styles.active : ''}`}>
         <div className={styles.headerInner}>
-          <Link href="/" className={styles.headerLogo}>NEXT TECH</Link>
+          <p className={styles.headerLogo}>
+            <Logo />
+          </p>
           <nav id="pcNav" className={styles.pcNav}>
             <Link href="/">TOP</Link>
             <Link href="/about">ABOUT</Link>
@@ -89,7 +92,7 @@ export const Header = () => {
         <div className={styles.spNavInner}>
           <div className={styles.spNavLinks}>
             <p className={styles.logo}>
-              <Link href="/">NEXT TECH</Link>
+              <Logo />
             </p>
             <nav id="spNav" className={styles.spNav}></nav>
           </div>

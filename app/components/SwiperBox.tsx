@@ -7,14 +7,15 @@ import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
 import styles from '../styles/page.module.scss'
 
-const images = [
-    `/1.webp`,
-    `/2.webp`,
-    `/3.webp`,
-    `/4.webp`,
-];
 
-const SwiperBox = () => {
+export const SwiperBox = () => {
+    const images = [
+        "/1.webp",
+        "/2.webp",
+        "/3.webp",
+        "/4.webp"
+    ];
+
     return (
         <>
             <Swiper
@@ -41,5 +42,3 @@ const SwiperBox = () => {
         </>
     );
 };
-
-export default SwiperBox;
