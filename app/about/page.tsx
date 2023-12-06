@@ -11,6 +11,28 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
+
+  const aboutData = [
+    {
+      id: "a01",
+      title: "VISION",
+      image: webp1,
+      text: "In the rapid evolution of technology, I always bear the mission of providing the latest innovative services. My vision is to be a true partner in helping clients achieve their desired success through the power of technology. I strive to stand at the forefront of technology and provide innovative solutions."
+    },
+    {
+      id: "a02",
+      title: "MISSION",
+      image: webp2,
+      text: 'My mission is to deeply understand the clients\' businesses and leverage advanced technology to produce tangible results. I value walking alongside our clients as true partners in the pursuit of business success, rather than being just developers.'
+    },
+    {
+      id: "a03",
+      title: "REASON",
+      image: webp3,
+      text: 'The impact of the rapid evolution of technology on modern businesses is immeasurable. I launched this business based on the belief that "technology can make businesses more effective and improved." I believe in solving the challenges faced by clients and elevating businesses to the next level through technology, thereby providing value to society and achieving success.'
+    }
+  ]
+
   return (
     <section id="blog">
       <div className={styles.underInner}>
@@ -19,51 +41,27 @@ export default function Page() {
       <div className={styles.containerInner}>
         <div className={styles.pageNav}>
           <ul className={styles.pageNavList}>
-            <li>
-              <Link href="#a01">
-                VISION
-              </Link>
-            </li>
-            <li>
-              <Link href="#a02">
-                MISSION
-              </Link>
-            </li>
-            <li>
-              <Link href="#a03">
-                REASON
-              </Link>
-            </li>
+            {aboutData.map((about, index) => (
+              <li key={index}>
+                <Link href={`#${about.id}`}>
+                  {about.title}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
-        <section id="a01" className={styles.about}>
+        {aboutData.map((about, index) => (
+          <section id={about.id} className={styles.about} key={index}>
           <div className={styles.aboutInner}>
-            <h3>VISION</h3>
-            <div className={styles.aboutFlex}>
-              <Image src={webp1} alt="VISION" width={600} height={400} priority />
-              <p>In the rapid evolution of technology, I always bear the mission of providing the latest innovative services. My vision is to be a true partner in helping clients achieve their desired success through the power of technology. I strive to stand at the forefront of technology and provide innovative solutions.</p>
+            <h3>{about.title}</h3>
+            <div className={`${styles.aboutFlex} ${about.title === 'MISSION' ? styles.visionSection : ''}`}>
+              <Image src={about.image} alt={about.title} width={600} height={400} priority />
+              <p>{about.text}</p>
             </div>
           </div>
-        </section>
-        <section id="a02" className={styles.about}>
-          <div className={styles.aboutInner}>
-            <h3>MISSION</h3>
-            <div className={styles.aboutFlex}>
-              <p>My mission is to deeply understand the clients&apos; businesses and leverage advanced technology to produce tangible results. I value walking alongside our clients as true partners in the pursuit of business success, rather than being just developers.</p>
-              <Image src={webp2} alt="MISSION" width={600} height={400} />
-            </div>
-          </div>
-        </section>
-        <section id="a03" className={styles.about}>
-          <div className={styles.aboutInner}>
-            <h3>REASON</h3>
-            <div className={styles.aboutFlex}>
-              <Image src={webp3} alt="REASON" width={600} height={400} />
-              <p>The impact of the rapid evolution of technology on modern businesses is immeasurable. I launched this business based on the belief that &quot;technology can make businesses more effective and improved.&quot; I believe in solving the challenges faced by clients and elevating businesses to the next level through technology, thereby providing value to society and achieving success.</p>
-            </div>
-          </div>
-        </section>
+          </section>
+        ))}
       </div>
     </section>
   )

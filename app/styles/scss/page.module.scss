@@ -862,6 +862,14 @@
 			}
 		}
 
+		.visionSection {
+			flex-direction: row-reverse;
+
+			@media (max-width: 896px) {
+				flex-direction: column;
+			}
+		}
+
 		img {
 			width: 30%;
 			height: auto;
