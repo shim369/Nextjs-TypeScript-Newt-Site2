@@ -52,8 +52,8 @@ export default function Contact() {
     }
   }
   return (
-      <div className={styles.containerInner}>
-      
+    <div className={styles.containerInner}>
+
       <form onSubmit={onSubmit} className={styles.form}>
         <dl>
           <dt><label htmlFor="name">Name*</label></dt>
@@ -71,6 +71,6 @@ export default function Contact() {
         </dl>
         <button type="submit">Submit</button>
       </form>
-      </div>
+    </div>
   )
 }

@@ -53,13 +53,13 @@ export default function Page() {
 
         {aboutData.map((about, index) => (
           <section id={about.id} className={styles.about} key={index}>
-          <div className={styles.aboutInner}>
-            <h3>{about.title}</h3>
-            <div className={`${styles.aboutFlex} ${about.title === 'MISSION' ? styles.visionSection : ''}`}>
-              <Image src={about.image} alt={about.title} width={600} height={400} priority />
-              <p>{about.text}</p>
+            <div className={styles.aboutInner}>
+              <h3>{about.title}</h3>
+              <div className={`${styles.aboutFlex} ${about.title === 'MISSION' ? styles.visionSection : ''}`}>
+                <Image src={about.image} alt={about.title} width={600} height={400} priority />
+                <p>{about.text}</p>
+              </div>
             </div>
-          </div>
           </section>
         ))}
       </div>

@@ -7,8 +7,8 @@ module.exports = {
   experimental: { esmExternals: true },
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     config.module.rules.push({
-    test: /\.(mp4|webm)$/,
-    use: [
+      test: /\.(mp4|webm)$/,
+      use: [
         {
           loader: 'file-loader',
           options: {
