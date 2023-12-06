@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import styles from '../styles/css/page.module.css'
+import styles from '../styles/page.module.scss'
 
 export const Faq = () => {
     const [openQuestions, setOpenQuestions] = useState<number[]>([]);

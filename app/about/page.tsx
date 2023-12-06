@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 import webp1 from '/public/1.webp';
 import webp2 from '/public/2.webp';
 import webp3 from '/public/3.webp';
-import styles from '../styles/css/page.module.css'
+import styles from '../styles/page.module.scss'
 
 export const metadata: Metadata = {
   title: 'ABOUT'

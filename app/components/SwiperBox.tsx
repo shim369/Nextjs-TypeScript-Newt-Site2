@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
-import styles from '../styles/css/page.module.css'
+import styles from '../styles/page.module.scss'
 
 const images = [
     `/1.webp`,

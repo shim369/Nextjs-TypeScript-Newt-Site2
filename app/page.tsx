@@ -4,7 +4,7 @@ import Gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Link from 'next/link'
 import Image from 'next/image'
-import styles from './styles/css/page.module.css'
+import styles from './styles/page.module.scss'
 import SwiperBox from './components/SwiperBox'
 import Contact from './components/Contact'
 import video_mp4 from './assets/video.mp4'

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { getArticles } from '@/lib/newt'
 import type { Metadata } from 'next'
-import styles from '../styles/css/page.module.css'
+import styles from '../styles/page.module.scss'
 
 export const metadata: Metadata = {
   title: 'BLOG'

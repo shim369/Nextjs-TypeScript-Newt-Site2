@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faBlog } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link';
-import styles from '../styles/css/page.module.css';
+import styles from '../styles/page.module.scss';
 
 export const Header = () => {
   const [isNavActive, setIsNavActive] = useState(false);

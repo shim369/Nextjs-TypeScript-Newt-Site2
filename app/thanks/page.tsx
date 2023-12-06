@@ -1,6 +1,6 @@
 "use client";
 import Link from 'next/link'
-import styles from '../styles/css/page.module.css'
+import styles from '../styles/page.module.scss'
 
 export default function Page() {
   return (

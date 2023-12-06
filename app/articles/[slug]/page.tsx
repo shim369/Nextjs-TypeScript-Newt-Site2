@@ -1,7 +1,7 @@
 import { getArticles, getArticleBySlug } from '@/lib/newt'
 import type { Article } from '@/types/article'
 import type { Metadata } from 'next'
-import styles from '../../styles/css/page.module.css'
+import styles from '../../styles/page.module.scss'
 
 type Props = {
   params: {
