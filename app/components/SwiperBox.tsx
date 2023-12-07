@@ -28,7 +28,7 @@ export const SwiperBox = () => {
                             width={1920}
                             height={1280}
                             alt='NEXT TECH'
-                            priority={index === 1}
+                            priority
                         />
                     </SwiperSlide>
                 );
