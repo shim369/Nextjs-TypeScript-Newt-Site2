@@ -6,28 +6,15 @@ import { faBlog } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link';
 import styles from '../styles/page.module.scss';
 import { Logo } from './Logo';
+import { LinkList } from './LinkList';
 
 export const Header = () => {
   const [isNavActive, setIsNavActive] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const toggleNavClick = () => {
-    setIsNavOpen((prev) => {
-      const newNavState = !prev;
-      document.body.classList.toggle(styles.open, newNavState);
-      return newNavState;
-    });
+    setIsNavOpen((prev) => !prev);
   };
-
-  useEffect(() => {
-    const spNav = document.querySelector("#spNav");
-    if (spNav) {
-      const navLinks = Array.from(document.querySelectorAll("#pcNav a"));
-      navLinks.forEach((link) => {
-        spNav.appendChild(link.cloneNode(true));
-      });
-    }
-  }, []);
 
   useEffect(() => {
     document.body.classList.toggle(styles.open, isNavOpen);
@@ -42,14 +29,8 @@ export const Header = () => {
       const pcNav = document.querySelector("#pcNav");
 
       if (pcNav) {
-        if (
-          document.body.scrollTop > 60 ||
-          document.documentElement.scrollTop > 60
-        ) {
-          pcNav.classList.add(styles.active);
-        } else {
-          pcNav.classList.remove(styles.active);
-        }
+        const isScrolled = document.body.scrollTop > 60 || document.documentElement.scrollTop > 60;
+        setIsNavActive(isScrolled);
       }
     };
 
@@ -68,12 +49,7 @@ export const Header = () => {
             <Logo />
           </p>
           <nav id="pcNav" className={styles.pcNav}>
-            <Link href="/">TOP</Link>
-            <Link href="/about">ABOUT</Link>
-            <Link href="/service">SERVICE</Link>
-            <Link href="/blog">BLOG</Link>
-            <Link href="/faq">FAQ</Link>
-            <Link href="/contact">CONTACT</Link>
+            <LinkList />
           </nav>
         </div>
         <ul className={styles.snsLink}>
@@ -94,7 +70,9 @@ export const Header = () => {
             <p className={styles.logo}>
               <Logo />
             </p>
-            <nav id="spNav" className={styles.spNav}></nav>
+            <nav id="spNav" className={styles.spNav}>
+              <LinkList />
+            </nav>
           </div>
         </div>
       </div>
