@@ -37,9 +37,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${tulpen_one.variable} ${lato.variable}`}>
-      <head>
+      {/* <head>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-      </head>
+      </head> */}
       <body suppressHydrationWarning={true}>
         <Header />
         <main className={styles.main}>

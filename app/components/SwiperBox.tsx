@@ -1,12 +1,11 @@
 "use client";
 import Image from 'next/image';
-import { Autoplay, EffectFade } from "swiper/modules";
+import SwiperCore, { Autoplay, EffectFade } from 'swiper'
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/autoplay";
-import "swiper/css/effect-fade";
+import 'swiper/swiper-bundle.min.css'
+import 'swiper/swiper.min.css'
 import styles from '../styles/page.module.scss'
-
+SwiperCore.use([Autoplay, EffectFade])
 
 export const SwiperBox = () => {
     const images = [
@@ -17,28 +16,25 @@ export const SwiperBox = () => {
     ];
 
     return (
-        <>
-            <Swiper
-                autoplay
-                effect={'fade'}
-                modules={[Autoplay, EffectFade]}
-                className={styles.swiperBox}
-                loop={true}
-            >
-                {images.map((src: string, index: number) => {
-                    return (
-                        <SwiperSlide key={`${index}`}>
-                            <Image
-                                src={src}
-                                width={1920}
-                                height={1280}
-                                alt='NEXT TECH'
-                                priority={index === 0}
-                            />
-                        </SwiperSlide>
-                    );
-                })}
-            </Swiper>
-        </>
+        <Swiper
+            autoplay={{ delay: 3000 }}
+            effect={'fade'}
+            className={styles.swiperBox}
+            loop={true}
+        >
+            {images.map((src: string, index: number) => {
+                return (
+                    <SwiperSlide key={index}>
+                        <Image
+                            src={src}
+                            width={1920}
+                            height={1280}
+                            alt='NEXT TECH'
+                            priority={index === 0}
+                        />
+                    </SwiperSlide>
+                );
+            })}
+        </Swiper>
     );
 };

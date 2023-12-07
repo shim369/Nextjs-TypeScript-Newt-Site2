@@ -56,7 +56,7 @@ export default function Page() {
             <div className={styles.aboutInner}>
               <h3>{about.title}</h3>
               <div className={`${styles.aboutFlex} ${about.title === 'MISSION' ? styles.visionSection : ''}`}>
-                <Image src={about.image} alt={about.title} width={600} height={400} priority />
+                <Image src={about.image} alt={about.title} width={600} height={400} priority={index === 1} />
                 <p>{about.text}</p>
               </div>
             </div>
