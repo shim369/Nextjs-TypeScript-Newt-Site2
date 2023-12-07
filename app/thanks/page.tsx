@@ -1,6 +1,11 @@
 "use client";
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import styles from '../styles/page.module.scss'
+
+export const metaData: Metadata = {
+  title: 'THANKS'
+}
 
 export default function Page() {
   return (

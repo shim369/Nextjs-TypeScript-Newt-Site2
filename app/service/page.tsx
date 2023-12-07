@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import styles from '../styles/page.module.scss'
 
-export const metadata: Metadata = {
+export const metaData: Metadata = {
   title: 'SERVICE'
 }
 

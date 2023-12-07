@@ -24,7 +24,7 @@ const lato = Lato({
   display: "swap",
 })
 
-export const metadata: Metadata = {
+export const metaData: Metadata = {
   title: {
     default: 'NEXT TECH',
     template: '%s | NEXT TECH',
