@@ -1,4 +1,4 @@
-import Contact from "../components/Contact";
+import { Contact } from "../components/Contact";
 import type { Metadata } from 'next'
 import styles from '../styles/page.module.scss'
 

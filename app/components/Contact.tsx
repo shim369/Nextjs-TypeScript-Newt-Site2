@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation'
 import type { FormEvent } from 'react'
 import styles from '../styles/page.module.scss'
 
-export default function Contact() {
+export const Contact = () => {
   const router = useRouter()
 
   const onSubmit = async (event: FormEvent) => {
@@ -18,11 +18,6 @@ export default function Contact() {
       name: target.name.value,
       email: target.email.value,
       message: target.message.value,
-    }
-
-    if (!data.name || !data.email || !data.message) {
-      alert('Please fill in all fields.')
-      return
     }
 
     const formData = new FormData()
