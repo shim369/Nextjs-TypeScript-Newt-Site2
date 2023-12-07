@@ -43,7 +43,7 @@ export const Header = () => {
 
   return (
     <>
-      <header className={`${styles.header} ${isNavActive ? styles.active : ''}`}>
+      <header className={`${styles.header} ${isNavActive ? styles.active : ''}`} data-testid="header">
         <div className={styles.headerInner}>
           <p className={styles.headerLogo}>
             <Logo />
@@ -57,7 +57,7 @@ export const Header = () => {
           <li><Link href="https://sohtani.pythonanywhere.com/" target="_blank" title="TECH BLOG"><FontAwesomeIcon icon={faBlog} /></Link></li>
         </ul>
       </header>
-      <div id="jsNavToggle" className={styles.jsNavToggle} onClick={toggleNavClick}>
+      <div id="jsNavToggle" className={styles.jsNavToggle} onClick={toggleNavClick} data-testid="jsNavToggle">
         <div>
           <span></span>
           <span></span>
