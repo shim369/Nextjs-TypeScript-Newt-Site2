@@ -3,7 +3,6 @@ import Image from 'next/image';
 import SwiperCore, { Autoplay, EffectFade } from 'swiper'
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/swiper-bundle.min.css'
-import 'swiper/swiper.min.css'
 import styles from '../styles/page.module.scss'
 SwiperCore.use([Autoplay, EffectFade])
 
