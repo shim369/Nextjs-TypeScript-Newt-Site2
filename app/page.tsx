@@ -52,15 +52,15 @@ export default function Home() {
   });
 
   useEffect(() => {
-    const swiperVisual = document.getElementById('swiperVisual');
-    Gsap.set(swiperVisual, { autoAlpha: 0 });
+    const slideVisual = document.getElementById('slideVisual');
+    Gsap.set(slideVisual, { autoAlpha: 0 });
     ScrollTrigger.create({
-      trigger: swiperVisual,
+      trigger: slideVisual,
       start: 'top center',
       end: 'center center',
       onEnter: () => {
-        if (swiperVisual) {
-          Gsap.to(swiperVisual, { autoAlpha: 1, duration: 0.5, ease: 'power4.out' });
+        if (slideVisual) {
+          Gsap.to(slideVisual, { autoAlpha: 1, duration: 0.5, ease: 'power4.out' });
         }
       },
     });
@@ -144,8 +144,8 @@ export default function Home() {
           <Service />
         </div>
       </section>
-      <section id="swiperVisual" className={styles.swiperVisual}>
-        <div id="swiperVisualInner" className={styles.swiperVisualInner}>
+      <section id="slideVisual" className={styles.slideVisual}>
+        <div id="slideVisualInner" className={styles.slideVisualInner}>
           <SlideBox />
           <h3>Would you like to try <br className={styles.spBr} />the latest technology?</h3>
         </div>
