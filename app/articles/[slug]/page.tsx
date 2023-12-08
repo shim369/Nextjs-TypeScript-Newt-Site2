@@ -9,7 +9,7 @@ type Props = {
   }
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generatemetadata({ params }: Props): Promise<metadata> {
   const { slug } = params;
   const article = await getArticleBySlug(slug);
 

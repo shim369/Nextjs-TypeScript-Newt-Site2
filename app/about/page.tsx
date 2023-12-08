@@ -6,7 +6,7 @@ import webp2 from '/public/2.webp';
 import webp3 from '/public/3.webp';
 import styles from '../styles/page.module.scss'
 
-export const metaData: Metadata = {
+export const metadata: Metadata = {
   title: 'ABOUT'
 };
 

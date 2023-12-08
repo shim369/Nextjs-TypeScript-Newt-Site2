@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Faq } from '../components/Faq'
 import styles from '../styles/page.module.scss'
 
-export const metaData: Metadata = {
+export const metadata: Metadata = {
   title: 'FAQ'
 }
 

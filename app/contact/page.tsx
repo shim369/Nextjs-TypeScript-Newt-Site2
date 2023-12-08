@@ -2,7 +2,7 @@ import { Contact } from "../components/Contact";
 import type { Metadata } from 'next'
 import styles from '../styles/page.module.scss'
 
-export const metaData: Metadata = {
+export const metadata: Metadata = {
   title: 'CONTACT'
 }
 

@@ -3,7 +3,7 @@ import { getArticles } from '@/lib/newt'
 import type { Metadata } from 'next'
 import styles from '../styles/page.module.scss'
 
-export const metaData: Metadata = {
+export const metadata: Metadata = {
   title: 'BLOG'
 }
 

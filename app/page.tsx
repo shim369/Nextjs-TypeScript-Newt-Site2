@@ -1,15 +1,14 @@
 "use client"
 import React, { useRef, useEffect } from 'react'
 import Gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import Link from 'next/link'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import Image from 'next/image'
 import styles from './styles/page.module.scss'
 import { SwiperBox } from './components/SwiperBox'
 import { Contact } from './components/Contact'
+import { Service } from './components/Service'
 import video_mp4 from './assets/video.mp4'
 import video_webm from './assets/video.webm'
-import { Service } from './components/Service';
 
 Gsap.registerPlugin(ScrollTrigger);
 
