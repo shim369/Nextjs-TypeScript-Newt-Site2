@@ -1,4 +1,3 @@
-"use client";
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import styles from '../styles/page.module.scss'
