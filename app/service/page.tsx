@@ -24,7 +24,7 @@ export default function Page() {
     },
     {
       title: "Design & UI/UX",
-      technologies: "Figma, Adobe (Photoshop, Illustrator)",
+      technologies: "Figma, Adobe Photoshop, Illustrator",
       price: "¥150,000 ~"
     },
   ];
