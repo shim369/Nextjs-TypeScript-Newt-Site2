@@ -27,12 +27,12 @@ export const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       const pcNav = document.querySelector("#pcNav");
-
+    
       if (pcNav) {
-        const isScrolled = document.body.scrollTop > 60 || document.documentElement.scrollTop > 60;
+        const isScrolled = window.scrollY > 60;
         setIsNavActive(isScrolled);
       }
-    };
+    };    
 
     window.addEventListener("scroll", handleScroll);
 
@@ -43,12 +43,12 @@ export const Header = () => {
 
   return (
     <>
-      <header className={`${styles.header} ${isNavActive ? styles.active : ''}`} data-testid="header">
+      <header className={styles.header} data-testid="header">
         <div className={styles.headerInner}>
           <p className={styles.headerLogo}>
             <Logo />
           </p>
-          <nav id="pcNav" className={styles.pcNav}>
+          <nav id="pcNav" className={`${styles.pcNav} ${isNavActive ? styles.active : ''}`}>
             <LinkList />
           </nav>
         </div>
