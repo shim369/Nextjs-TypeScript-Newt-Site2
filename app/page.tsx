@@ -9,6 +9,7 @@ import { SwiperBox } from './components/SwiperBox'
 import { Contact } from './components/Contact'
 import video_mp4 from './assets/video.mp4'
 import video_webm from './assets/video.webm'
+import { Service } from './components/Service';
 
 Gsap.registerPlugin(ScrollTrigger);
 
@@ -139,37 +140,9 @@ export default function Home() {
           <source src={video_webm} type="video/webm" />
         </video>
       </section>
-
       <section id="service">
         <div id="contentsBox" className={styles.contentsBox}>
-          <div className={styles.contentsItem}>
-            <div className={styles.contentsItemInner}>
-              <h2>ABOUT</h2>
-              <p>I established this business in 2023 with a mission to leverage technology and accelerate businesses. I am committed to supporting your business success with my experience and skills.</p>
-              <Link href="/about" className={styles.linkBtn}>Show Detail</Link>
-            </div>
-          </div>
-          <div className={styles.contentsItem}>
-            <div className={styles.contentsItemInner}>
-              <h2>SERVICE</h2>
-              <p>I provide tailor-made web solutions for your business, utilizing HTML, CSS, JavaScript, Python, and more. From online shops to corporate websites, I cater to a wide range of needs.</p>
-              <Link href="/service" className={styles.linkBtn}>Show Detail</Link>
-            </div>
-          </div>
-          <div className={styles.contentsItem}>
-            <div className={styles.contentsItemInner}>
-              <h2>BLOG</h2>
-              <p>I regularly publish articles covering a wide range of topics, from the latest technology trends to programming tutorials and up-to-date information. It&apos;s a reliable source to stay informed about the latest industry trends.</p>
-              <Link href="/blog" className={styles.linkBtn}>Show Detail</Link>
-            </div>
-          </div>
-          <div className={styles.contentsItem}>
-            <div className={styles.contentsItemInner}>
-              <h2>FAQ</h2>
-              <p>From pricing and post-development support to the technologies I use, I have compiled frequently asked questions and their answers in one place. If you have any uncertainties or questions, this section might provide quick solutions.</p>
-              <Link href="/faq" className={styles.linkBtn}>Show Detail</Link>
-            </div>
-          </div>
+          <Service />
         </div>
       </section>
       <section id="swiperVisual" className={styles.swiperVisual}>
