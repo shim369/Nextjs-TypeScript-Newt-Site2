@@ -208,31 +208,6 @@
 	}
 }
 
-.main {
-	min-height: 100vh;
-}
-
-.container {
-	max-width: 1440px;
-	margin: 0 auto;
-	padding: 3rem 1rem;
-	min-height: 100vh;
-
-	@media (max-width: 896px) {
-		padding: 1.5rem 1rem;
-	}
-
-	.containerInner {
-		max-width: 1440px;
-		margin: 0 auto;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 3rem 0;
-	}
-}
-
 .linkBtn {
 	color: var(--white);
 	background: var(--blue);
