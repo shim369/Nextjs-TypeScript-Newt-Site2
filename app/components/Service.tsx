@@ -26,8 +26,8 @@ export const Service = () => {
 	]
 	return (
 		<>
-			{services.map((service) => (
-				<div className={styles.contentsItem}>
+			{services.map((service, index) => (
+				<div className={styles.contentsItem} key={index}>
 					<div className={styles.contentsItemInner}>
 						<h2>{service.title}</h2>
 						<p>{service.text}</p>
