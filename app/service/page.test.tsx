@@ -15,6 +15,7 @@ interface AdditionalOption {
 }
 
 describe('SERVICE Page', () => {
+
 	test('renders service details and additional options', () => {
 		render(<Page />);
 

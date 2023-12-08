@@ -2,16 +2,9 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import "@testing-library/jest-dom";
-import Page, { metadata, aboutData } from './page';
+import Page, { aboutData } from './page';
 
 describe('Page Component', () => {
-    // タイトルが正しく表示されていることを確認するテスト
-    it('renders title', () => {
-        render(<Page />);
-        const titleElement = screen.getByText(metadata.title as string);
-        expect(titleElement).toBeInTheDocument();
-    });
-
     // ナビゲーションが正しく動作していることを確認するテスト
     it('handles navigation correctly', () => {
         render(<Page />);

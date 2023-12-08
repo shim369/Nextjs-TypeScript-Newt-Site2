@@ -4,7 +4,7 @@ import Gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import Image from 'next/image'
 import styles from './styles/page.module.scss'
-import { SwiperBox } from './components/SwiperBox'
+import { SlideBox } from './components/SlideBox'
 import { Contact } from './components/Contact'
 import { Service } from './components/Service'
 import video_mp4 from './assets/video.mp4'
@@ -146,7 +146,7 @@ export default function Home() {
       </section>
       <section id="swiperVisual" className={styles.swiperVisual}>
         <div id="swiperVisualInner" className={styles.swiperVisualInner}>
-          <SwiperBox />
+          <SlideBox />
           <h3>Would you like to try <br className={styles.spBr} />the latest technology?</h3>
         </div>
       </section>

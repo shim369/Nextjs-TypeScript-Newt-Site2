@@ -1,6 +1,6 @@
 "use client";
 import { useRouter } from 'next/navigation'
-import type { FormEvent } from 'react'
+import { type FormEvent } from 'react'
 import styles from '../styles/page.module.scss'
 
 export const Contact = () => {
@@ -69,3 +69,11 @@ export const Contact = () => {
     </div>
   )
 }
+
+export const validateEmail = (email: string) => {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+  if (regex.test(email)) {
+    return true;
+  }
+  return false;
+};

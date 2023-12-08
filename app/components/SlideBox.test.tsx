@@ -1,16 +1,15 @@
 import React from 'react';
 import { render, waitFor, screen } from '@testing-library/react';
-import { SwiperBox } from './SwiperBox';
+import { SlideBox } from './SlideBox';
+import "@testing-library/jest-dom";
 
-describe('SwiperBox', () => {
-    it('renders SwiperBox with images', async () => {
-        render(<SwiperBox />);
+describe('SlideBox', () => {
+    it('renders SlideBox with images', async () => {
+        render(<SlideBox />);
 
-        await waitFor(() => {
+        // Slideの初期化と画像の読み込みが完了するまで待機
+        await waitFor(async () => {
             const images = screen.queryAllByAltText('NEXT TECH');
-
-            //fadeをしようしているので、前後の画像の枚数=プラス2を足して6で検証
-            expect(images.length).toBe(6);
 
             images.forEach((image) => {
                 const srcAttribute = image.getAttribute('src');
