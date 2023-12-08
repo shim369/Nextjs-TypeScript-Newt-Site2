@@ -29,8 +29,8 @@ export default function Home() {
 
     if (openingLogo && openingAnimation && topLeftInner && topRight) {
       openingLogoTimeline.to(openingLogo, { autoAlpha: 1, duration: 0.5, delay: 0.5 });
-      openingLogoTimeline.to(openingAnimation, { autoAlpha: 0, duration: 0.5, delay: 1 });
-      openingLogoTimeline.to(topLeftInner, { y: '0%', autoAlpha: 1, duration: 0.5, delay: 1, ease: 'power4.out' });
+      openingLogoTimeline.to(openingAnimation, { autoAlpha: 0, duration: 0.5, delay: 0.5 });
+      openingLogoTimeline.to(topLeftInner, { y: '0%', autoAlpha: 1, duration: 0.5, delay: 0.5, ease: 'power4.out' });
       openingLogoTimeline.to(topRight, { autoAlpha: 1, duration: 1, delay: 0.5, ease: 'power4.out' }, '-=0.5');
     }
   })
