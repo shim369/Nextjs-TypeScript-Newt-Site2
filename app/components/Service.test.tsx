@@ -1,7 +1,9 @@
-import styles from '../styles/page.module.scss';
-import { LinkButton } from './LinkButton';
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import { Service } from './Service';
+import "@testing-library/jest-dom";
 
-export const Service = () => {
+test('renders service items with correct titles and links', () => {
 	const services = [
 		{
 			title: "ABOUT",
@@ -23,18 +25,18 @@ export const Service = () => {
 			text: "From pricing and post-development support to the technologies I use, I have compiled frequently asked questions and their answers in one place. If you have any uncertainties or questions, this section might provide quick solutions.",
 			linkText: "/faq"
 		}
-	]
-	return (
-		<>
-			{services.map((service) => (
-				<div className={styles.contentsItem}>
-					<div className={styles.contentsItemInner}>
-						<h2>{service.title}</h2>
-						<p>{service.text}</p>
-						<LinkButton href={service.linkText} />
-					</div>
-				</div>
-			))}
-		</>
-	);
-};
+	];
+
+	render(<Service />);
+
+	const serviceTitles = screen.getAllByRole('heading', { level: 2 });
+	const serviceLinks = screen.getAllByRole('link', { name: /show detail/i });
+
+	expect(serviceTitles).toHaveLength(4);
+	expect(serviceLinks).toHaveLength(4);
+
+	serviceTitles.forEach((title, index) => {
+		expect(title.textContent).toContain(services[index].title);
+		expect(serviceLinks[index]).toHaveAttribute('href', services[index].linkText);
+	});
+});
