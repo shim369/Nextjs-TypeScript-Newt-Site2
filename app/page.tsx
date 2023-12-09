@@ -7,20 +7,30 @@ import styles from './styles/page.module.scss'
 import { SlideBox } from './components/SlideBox'
 import { Contact } from './components/Contact'
 import { Service } from './components/Service'
-import video_mp4 from './assets/video.mp4'
-import video_webm from './assets/video.webm'
 
 Gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
-
+  const openingAnimationRef = useRef<HTMLDivElement>(null);
+  const openingLogoRef = useRef<HTMLDivElement>(null);
+  const topLeftInnerRef = useRef<HTMLDivElement>(null);
+  const topRightRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const videoContainerRef = useRef<HTMLDivElement>(null);
+  const contentsBoxRef = useRef<HTMLDivElement>(null);
+  const slideVisualRef = useRef<HTMLDivElement>(null);
+  const leftDivRef = useRef<HTMLDivElement>(null);
+  const rightDivRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
+  const video_mp4 = '/video.mp4';
+  const video_webm = '/video.webm';
+
 
   useEffect(() => {
-    const openingLogo = document.getElementById('openingLogo');
-    const openingAnimation = document.getElementById('openingAnimation');
-    const topLeftInner = document.getElementById('topLeftInner');
-    const topRight = document.getElementById('topRight');
+    const openingAnimation = openingAnimationRef.current;
+    const openingLogo = openingLogoRef.current;
+    const topLeftInner = topLeftInnerRef.current;
+    const topRight = topRightRef.current;
     Gsap.set(openingLogo, { autoAlpha: 0 });
     Gsap.set(topLeftInner, { y: '30px', autoAlpha: 0 });
     Gsap.set(topRight, { autoAlpha: 0 });
@@ -36,7 +46,7 @@ export default function Home() {
   })
 
   useEffect(() => {
-    const contentsBox = document.getElementById('contentsBox');
+    const contentsBox = contentsBoxRef.current;
     Gsap.set(contentsBox, { y: '30px', autoAlpha: 0 });
 
     ScrollTrigger.create({
@@ -52,7 +62,7 @@ export default function Home() {
   });
 
   useEffect(() => {
-    const slideVisual = document.getElementById('slideVisual');
+    const slideVisual = slideVisualRef.current;
     Gsap.set(slideVisual, { autoAlpha: 0 });
     ScrollTrigger.create({
       trigger: slideVisual,
@@ -67,9 +77,9 @@ export default function Home() {
   });
 
   useEffect(() => {
-    const videoContainer = document.getElementById('videoContainer');
-    const leftDiv = document.getElementById('leftDiv');
-    const rightDiv = document.getElementById('rightDiv');
+    const videoContainer = videoContainerRef.current;
+    const leftDiv = leftDivRef.current;
+    const rightDiv = rightDivRef.current;
 
     Gsap.to(videoRef.current, {
       scrollTrigger: {
@@ -84,14 +94,11 @@ export default function Home() {
         },
       },
     });
-
-    if (videoRef.current) {
-      videoRef.current?.play();
-    }
+    videoRef.current?.play();
   }, [videoRef]);
 
   useEffect(() => {
-    const contact = document.getElementById('contact');
+    const contact = contactRef.current;
     Gsap.set(contact, { y: '30px', autoAlpha: 0 });
 
     ScrollTrigger.create({
@@ -108,26 +115,26 @@ export default function Home() {
 
   return (
     <>
-      <div id="openingAnimation" className={styles.openingAnimation}>
-        <p id="openingLogo" className={styles.openingLogo}>NEXT TECH</p>
+      <div id="openingAnimation" className={styles.openingAnimation} ref={openingAnimationRef}>
+        <p id="openingLogo" className={styles.openingLogo} ref={openingLogoRef}>NEXT TECH</p>
       </div>
       <section className={styles.topVisual}>
         <div className={styles.topLeft}>
-          <div id="topLeftInner" className={styles.topLeftInner}>
+          <div id="topLeftInner" className={styles.topLeftInner} ref={topLeftInnerRef}>
             <a href="/" className={styles.logo}>Web Development</a>
             <p>Welcome to NEXT TECH.<br />Your gateway to cutting-edge tech solutions.</p>
           </div>
         </div>
-        <div id="topRight" className={styles.topRight}>
+        <div id="topRight" className={styles.topRight} ref={topRightRef}>
           <Image src="/top-v.webp" alt="NEXT TECH" width={681} height={400} priority />
         </div>
       </section>
-      <section id="videoContainer" className={styles.videoContainer}>
+      <section id="videoContainer" className={styles.videoContainer} ref={videoContainerRef}>
         <h2 className={styles.videoText}>
           Increasing Business Velocity <br />through Technology
         </h2>
-        <div id="leftDiv" className={styles.leftDiv}></div>
-        <div id="rightDiv" className={styles.rightDiv}></div>
+        <div id="leftDiv" className={styles.leftDiv} ref={leftDivRef}></div>
+        <div id="rightDiv" className={styles.rightDiv} ref={rightDivRef}></div>
         <video
           className={styles.video}
           ref={videoRef}
@@ -140,17 +147,17 @@ export default function Home() {
         </video>
       </section>
       <section id="service">
-        <div id="contentsBox" className={styles.contentsBox}>
+        <div id="contentsBox" className={styles.contentsBox} ref={contentsBoxRef}>
           <Service />
         </div>
       </section>
-      <section id="slideVisual" className={styles.slideVisual}>
+      <section id="slideVisual" className={styles.slideVisual} ref={slideVisualRef}>
         <div id="slideVisualInner" className={styles.slideVisualInner}>
           <SlideBox />
           <h3>Would you like to try <br className={styles.spBr} />the latest technology?</h3>
         </div>
       </section>
-      <section id="contact" className={styles.contact}>
+      <section id="contact" className={styles.contact} ref={contactRef}>
         <h2>CONTACT</h2>
         <Contact />
       </section>
