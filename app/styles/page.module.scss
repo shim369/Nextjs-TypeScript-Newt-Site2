@@ -58,11 +58,9 @@
 			&:last-child {
 				background: var(--dark-blue);
 				color: var(--white);
-				border: solid 1px var(--dark-blue);
 
 				&:hover {
-					background: transparent;
-					border: solid 1px var(--dark-blue);
+					background: #666;
 					color: var(--white);
 				}
 			}
