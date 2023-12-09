@@ -217,10 +217,9 @@
 	font-size: 1.2rem;
 	font-family: var(--font-tulpen_One);
 	border: 1px solid var(--blue);
-	transition: all 0.3s ease;
 
 	&:hover {
-		background: var(--black);
+		background: transparent;
 		color: var(--blue);
 		border: 1px solid var(--blue);
 		transition: all 0.3s ease;
@@ -937,7 +936,6 @@
 		display: block;
 		color: var(--white);
 		text-align: center;
-		transition: all 0.3s ease;
 		border: 1px solid var(--blue);
 		padding: .8rem .25rem;
 		margin: 1rem auto 0;
