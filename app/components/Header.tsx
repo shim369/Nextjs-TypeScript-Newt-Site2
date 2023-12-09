@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faBlog } from '@fortawesome/free-solid-svg-icons'
@@ -11,6 +11,7 @@ import { LinkList } from './LinkList';
 export const Header = () => {
   const [isNavActive, setIsNavActive] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const pcNavRef = useRef(null);
 
   const toggleNavClick = () => {
     setIsNavOpen((prev) => !prev);
@@ -26,9 +27,7 @@ export const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const pcNav = document.querySelector("#pcNav");
-    
-      if (pcNav) {
+      if (pcNavRef.current) {
         const isScrolled = window.scrollY > 60;
         setIsNavActive(isScrolled);
       }
@@ -48,7 +47,7 @@ export const Header = () => {
           <p className={styles.headerLogo}>
             <Logo />
           </p>
-          <nav id="pcNav" className={`${styles.pcNav} ${isNavActive ? styles.active : ''}`}>
+          <nav ref={pcNavRef} className={`${styles.pcNav} ${isNavActive ? styles.active : ''}`}>
             <LinkList />
           </nav>
         </div>
