@@ -1,6 +1,6 @@
 "use client";
 import { useRouter } from 'next/navigation'
-import { type FormEvent } from 'react'
+import type { FormEvent } from 'react'
 import styles from '../styles/page.module.scss'
 
 export const Contact = () => {

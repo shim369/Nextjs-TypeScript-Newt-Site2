@@ -2,6 +2,7 @@ import { getArticles, getArticleBySlug } from '@/lib/newt'
 import type { Article } from '@/types/article'
 import type { Metadata } from 'next'
 import styles from '../../styles/page.module.scss'
+import { UnderInner } from '@/app/components/UnderInner'
 
 type Props = {
   params: {
@@ -31,9 +32,7 @@ export default async function Article({ params }: Props) {
 
   return (
     <section>
-      <div className={styles.underInner}>
-        <h2>BLOG</h2>
-      </div>
+      <UnderInner title={"BLOG"} />
       <div className={styles.blogDetail}>
         <hr />
         <div className={styles.blogContent}>

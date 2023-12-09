@@ -7,7 +7,7 @@ describe('THANKS Page', () => {
     test('renders Thanks Page', () => {
         render(<Page />);
 
-        expect(screen.getByText(/CONTACT/i)).toBeInTheDocument();
+        expect(screen.getByText(/THANKS/i)).toBeInTheDocument();
         expect(screen.getByText(/Thank you for your inquiry./i)).toBeInTheDocument();
         expect(screen.getByText(/Back to Previous Page/i)).toBeInTheDocument();
     });

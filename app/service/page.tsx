@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import styles from '../styles/page.module.scss'
+import { UnderInner } from '../components/UnderInner';
 
 export const metadata: Metadata = {
   title: 'SERVICE'
@@ -31,9 +32,7 @@ export default function Page() {
 
   return (
     <section id="service">
-      <div className={styles.underInner}>
-        <h2>SERVICE</h2>
-      </div>
+      <UnderInner title={metadata.title as string} />
       <div className={styles.containerInner}>
         <p className={styles.underRead}>The prices listed above are all reference prices and may vary depending on the project&apos;s scope and requirements.<br />For more details, please inquire.</p>
 

@@ -1,6 +1,6 @@
-import { Contact } from "../components/Contact";
+import { Contact } from "../components/Contact"
+import { UnderInner } from "../components/UnderInner"
 import type { Metadata } from 'next'
-import styles from '../styles/page.module.scss'
 
 export const metadata: Metadata = {
   title: 'CONTACT'
@@ -8,13 +8,9 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <>
-      <section id="contact">
-        <div className={styles.underInner}>
-          <h2>CONTACT</h2>
-        </div>
-        <Contact />
-      </section>
-    </>
+    <section id="contact">
+      <UnderInner title={metadata.title as string} />
+      <Contact />
+    </section>
   )
 }

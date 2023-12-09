@@ -2,6 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import styles from '../styles/page.module.scss'
+import { UnderInner } from '../components/UnderInner'
 
 export const metadata: Metadata = {
   title: 'ABOUT',
@@ -31,9 +32,7 @@ export const aboutData = [
 export default function Page() {
   return (
     <section id="blog">
-      <div className={styles.underInner}>
-        <h2>ABOUT</h2>
-      </div>
+      <UnderInner title={metadata.title as string} />
       <div className={styles.containerInner}>
         <div className={styles.pageNav}>
           <ul className={styles.pageNavList}>

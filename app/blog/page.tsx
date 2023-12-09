@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { getArticles } from '@/lib/newt'
 import type { Metadata } from 'next'
 import styles from '../styles/page.module.scss'
+import { UnderInner } from '../components/UnderInner'
 
 export const metadata: Metadata = {
   title: 'BLOG'
@@ -11,9 +12,7 @@ export default async function Page() {
   const articles = await getArticles()
   return (
     <section id="blog">
-      <div className={styles.underInner}>
-        <h2>BLOG</h2>
-      </div>
+      <UnderInner title={metadata.title as string} />
       <div className={styles.containerInner}>
         <p className={styles.underRead}>On our blog, I regularly update the latest industry trends, technical tutorials, and up-to-date information. <br />If you have any questions or inquiries, please feel free to contact us through our contact page.</p>
 

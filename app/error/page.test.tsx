@@ -7,7 +7,7 @@ describe('ERROR Page', () => {
     test('renders Error Page', () => {
         render(<Page />);
 
-        expect(screen.getByText(/CONTACT/i)).toBeInTheDocument();
+        expect(screen.getByText(/ERROR/i)).toBeInTheDocument();
         expect(screen.getByText(/Sending your inquiry failed./i)).toBeInTheDocument();
         expect(screen.getByText(/Back to Previous Page/i)).toBeInTheDocument();
     });
