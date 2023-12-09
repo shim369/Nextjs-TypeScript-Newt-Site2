@@ -1,49 +1,3 @@
-.openingAnimation {
-	top: 0;
-	left: 0;
-	position: absolute;
-	width: 100%;
-	height: 100vh;
-	background: url(/top-v.webp);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	z-index: 99997;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	@media (max-width: 896px) {
-		background-image: none;
-	}
-
-	&::before {
-		position: absolute;
-		content: "";
-		display: block;
-		width: 100%;
-		height: 100%;
-		background: #0387a2e4;
-		z-index: 99998;
-
-		@media (max-width: 896px) {
-			background: var(--blue);
-		}
-	}
-
-	.openingLogo {
-		font-family: var(--font-tulpen_One);
-		color: var(--white);
-		font-size: 8rem;
-		opacity: 0;
-		z-index: 99999;
-
-		@media (max-width: 639px) {
-			font-size: 5rem;
-		}
-	}
-}
-
 .header {
 	position: absolute;
 	width: 100%;
@@ -210,113 +164,6 @@
 	}
 }
 
-.linkBtn {
-	color: var(--white);
-	background: var(--blue);
-	padding: .5rem 1rem;
-	font-size: 1.2rem;
-	font-family: var(--font-tulpen_One);
-	border: 1px solid var(--blue);
-
-	&:hover {
-		background: transparent;
-		color: var(--blue);
-		border: 1px solid var(--blue);
-		transition: all 0.3s ease;
-	}
-}
-
-.contentsBox {
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-	opacity: 0;
-
-	@media (max-width: 639px) {
-		flex-direction: column;
-	}
-
-	.contentsItem {
-		width: 50%;
-		height: 50vh;
-		position: relative;
-		z-index: 0;
-		background-size: cover;
-		background-position: center;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		@media (max-width: 639px) {
-			width: 100%;
-			height: auto;
-			margin-bottom: 1rem;
-		}
-
-		&::before {
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			content: "";
-			background: rgba(0, 0, 0, .5);
-			width: 100%;
-			height: 100%;
-			z-index: 1;
-		}
-
-		&:hover {
-			&::before {
-				transition: all .3s;
-				background: rgba(0, 0, 0, .8);
-			}
-		}
-
-		&:nth-child(1) {
-			background-image: url(/1.webp);
-		}
-
-		&:nth-child(2) {
-			background-image: url(/2.webp);
-		}
-
-		&:nth-child(3) {
-			background-image: url(/3.webp);
-		}
-
-		&:nth-child(4) {
-			background-image: url(/4.webp);
-		}
-
-		.contentsItemInner {
-			position: relative;
-			padding: 2rem;
-			z-index: 2;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			max-width: 600px;
-			margin: 0 auto;
-		}
-
-		h2 {
-			margin-bottom: 2rem;
-			font-size: 3rem;
-			font-family: var(--font-tulpen_One);
-
-			@media (max-width: 639px) {
-				font-size: 2.5rem;
-			}
-		}
-
-		p {
-			margin-bottom: 2rem;
-			font-size: 1.1rem;
-		}
-	}
-}
 
 .jsNavToggle {
 	display: block;
@@ -619,6 +466,114 @@
 		.spNavInner {
 			-webkit-animation: nav-anime-opacity 0.6s ease 0.4s forwards;
 			animation: nav-anime-opacity 0.6s ease 0.4s forwards;
+		}
+	}
+}
+
+.linkBtn {
+	color: var(--white);
+	background: var(--blue);
+	padding: .5rem 1rem;
+	font-size: 1.2rem;
+	font-family: var(--font-tulpen_One);
+	border: 1px solid var(--blue);
+
+	&:hover {
+		background: transparent;
+		color: var(--blue);
+		border: 1px solid var(--blue);
+		transition: all 0.3s ease;
+	}
+}
+
+.contentsBox {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	opacity: 0;
+
+	@media (max-width: 639px) {
+		flex-direction: column;
+	}
+
+	.contentsItem {
+		width: 50%;
+		height: 50vh;
+		position: relative;
+		z-index: 0;
+		background-size: cover;
+		background-position: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		@media (max-width: 639px) {
+			width: 100%;
+			height: auto;
+			margin-bottom: 1rem;
+		}
+
+		&::before {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			content: "";
+			background: rgba(0, 0, 0, .5);
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+		}
+
+		&:hover {
+			&::before {
+				transition: all .3s;
+				background: rgba(0, 0, 0, .8);
+			}
+		}
+
+		&:nth-child(1) {
+			background-image: url(/1.webp);
+		}
+
+		&:nth-child(2) {
+			background-image: url(/2.webp);
+		}
+
+		&:nth-child(3) {
+			background-image: url(/3.webp);
+		}
+
+		&:nth-child(4) {
+			background-image: url(/4.webp);
+		}
+
+		.contentsItemInner {
+			position: relative;
+			padding: 2rem;
+			z-index: 2;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			max-width: 600px;
+			margin: 0 auto;
+		}
+
+		h2 {
+			margin-bottom: 2rem;
+			font-size: 3rem;
+			font-family: var(--font-tulpen_One);
+
+			@media (max-width: 639px) {
+				font-size: 2.5rem;
+			}
+		}
+
+		p {
+			margin-bottom: 2rem;
+			font-size: 1.1rem;
 		}
 	}
 }

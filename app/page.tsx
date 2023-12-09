@@ -11,8 +11,6 @@ import { Service } from './components/Service'
 Gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
-  const openingAnimationRef = useRef<HTMLDivElement>(null);
-  const openingLogoRef = useRef<HTMLDivElement>(null);
   const topLeftInnerRef = useRef<HTMLDivElement>(null);
   const topRightRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -27,18 +25,13 @@ export default function Home() {
 
 
   useEffect(() => {
-    const openingAnimation = openingAnimationRef.current;
-    const openingLogo = openingLogoRef.current;
     const topLeftInner = topLeftInnerRef.current;
     const topRight = topRightRef.current;
-    Gsap.set(openingLogo, { autoAlpha: 0 });
     Gsap.set(topLeftInner, { y: '30px', autoAlpha: 0 });
     Gsap.set(topRight, { autoAlpha: 0 });
 
     const TL = Gsap.timeline();
 
-    TL.to(openingLogo, { autoAlpha: 1, duration: 0.5, delay: 0.5 });
-    TL.to(openingAnimation, { autoAlpha: 0, duration: 0.5, delay: 0.5 });
     TL.to(topLeftInner, { y: '0%', autoAlpha: 1, duration: 0.5, delay: 0.5, ease: 'power4.out' });
     TL.to(topRight, { autoAlpha: 1, duration: 1, delay: 0.5, ease: 'power4.out' }, '-=0.5');
   })
@@ -107,9 +100,6 @@ export default function Home() {
 
   return (
     <>
-      <div id="openingAnimation" className={styles.openingAnimation} ref={openingAnimationRef}>
-        <p id="openingLogo" className={styles.openingLogo} ref={openingLogoRef}>NEXT TECH</p>
-      </div>
       <section className={styles.topVisual}>
         <div className={styles.topLeft}>
           <div id="topLeftInner" className={styles.topLeftInner} ref={topLeftInnerRef}>
