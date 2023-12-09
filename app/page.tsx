@@ -46,7 +46,7 @@ export default function Home() {
       end: 'center center',
       onEnter: () => {
         if (contentsBox) {
-          Gsap.to(contentsBox, { autoAlpha: 1, duration: 0.5, delay: 0.2, ease: 'power4.out' });
+          Gsap.to(contentsBox, { autoAlpha: 1, duration: 0.5, delay: 0.5, ease: 'power4.out' });
         }
       },
     });
