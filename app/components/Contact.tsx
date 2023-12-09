@@ -48,7 +48,6 @@ export const Contact = () => {
   }
   return (
     <div className={styles.containerInner}>
-
       <form onSubmit={onSubmit} className={styles.form}>
         <dl>
           <dt><label htmlFor="name">Name*</label></dt>

@@ -8,7 +8,7 @@ describe('SlideBox', () => {
         render(<SlideBox />);
 
         // Slideの初期化と画像の読み込みが完了するまで待機
-        await waitFor(async () => {
+        await waitFor(() => {
             const images = screen.queryAllByAltText('NEXT TECH');
 
             images.forEach((image) => {
