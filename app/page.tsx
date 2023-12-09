@@ -35,14 +35,12 @@ export default function Home() {
     Gsap.set(topLeftInner, { y: '30px', autoAlpha: 0 });
     Gsap.set(topRight, { autoAlpha: 0 });
 
-    const openingLogoTimeline = Gsap.timeline();
+    const TL = Gsap.timeline();
 
-    if (openingLogo && openingAnimation && topLeftInner && topRight) {
-      openingLogoTimeline.to(openingLogo, { autoAlpha: 1, duration: 0.5, delay: 0.5 });
-      openingLogoTimeline.to(openingAnimation, { autoAlpha: 0, duration: 0.5, delay: 0.5 });
-      openingLogoTimeline.to(topLeftInner, { y: '0%', autoAlpha: 1, duration: 0.5, delay: 0.5, ease: 'power4.out' });
-      openingLogoTimeline.to(topRight, { autoAlpha: 1, duration: 1, delay: 0.5, ease: 'power4.out' }, '-=0.5');
-    }
+    TL.to(openingLogo, { autoAlpha: 1, duration: 0.5, delay: 0.5 });
+    TL.to(openingAnimation, { autoAlpha: 0, duration: 0.5, delay: 0.5 });
+    TL.to(topLeftInner, { y: '0%', autoAlpha: 1, duration: 0.5, delay: 0.5, ease: 'power4.out' });
+    TL.to(topRight, { autoAlpha: 1, duration: 1, delay: 0.5, ease: 'power4.out' }, '-=0.5');
   })
 
   useEffect(() => {
@@ -69,9 +67,7 @@ export default function Home() {
       start: 'top center',
       end: 'center center',
       onEnter: () => {
-        if (slideVisual) {
-          Gsap.to(slideVisual, { autoAlpha: 1, duration: 0.5, ease: 'power4.out' });
-        }
+        Gsap.to(slideVisual, { autoAlpha: 1, duration: 0.5, ease: 'power4.out' });
       },
     });
   });
@@ -87,10 +83,8 @@ export default function Home() {
         start: 'top center',
         end: 'bottom center',
         onEnter: () => {
-          if (leftDiv && rightDiv) {
-            Gsap.to(leftDiv, { width: 0, duration: 0.5 });
-            Gsap.to(rightDiv, { width: 0, duration: 0.5 });
-          }
+          Gsap.to(leftDiv, { width: 0, duration: 0.5 });
+          Gsap.to(rightDiv, { width: 0, duration: 0.5 });
         },
       },
     });
@@ -106,9 +100,7 @@ export default function Home() {
       start: 'top center',
       end: 'center center',
       onEnter: () => {
-        if (contact) {
-          Gsap.to(contact, { y: '0%', autoAlpha: 1, duration: 0.5, delay: 0.2, ease: 'power4.out' });
-        }
+        Gsap.to(contact, { y: '0%', autoAlpha: 1, duration: 0.5, delay: 0.2, ease: 'power4.out' });
       },
     });
   });
