@@ -33,7 +33,7 @@ export const SlideBox = () => {
             src={src}
             width={1920}
             height={1280}
-            alt={`Image ${index + 1}`}
+            alt={`Next Texh Image ${index + 1}`}
           />
         </div>
       ))}
