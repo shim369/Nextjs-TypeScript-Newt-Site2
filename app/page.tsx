@@ -46,7 +46,7 @@ export default function Home() {
       end: 'center center',
       onEnter: () => {
         if (contentsBox) {
-          Gsap.to(contentsBox, { autoAlpha: 1, duration: 0.5, delay: 0.5, ease: 'power4.out' });
+          Gsap.to(contentsBox, { autoAlpha: 1, duration: 0.5, ease: 'power4.out' });
         }
       },
     });
@@ -93,7 +93,7 @@ export default function Home() {
       start: 'top center',
       end: 'center center',
       onEnter: () => {
-        Gsap.to(contact, { y: '0%', autoAlpha: 1, duration: 0.5, delay: 0.2, ease: 'power4.out' });
+        Gsap.to(contact, { y: '0%', autoAlpha: 1, duration: 0.5, ease: 'power4.out' });
       },
     });
   });
