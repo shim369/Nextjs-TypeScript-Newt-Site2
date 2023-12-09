@@ -102,19 +102,19 @@
 			}
 
 			&:last-child {
-				background: var(--blue);
+				background: var(--dark-blue);
 				color: var(--white);
-				border: solid 1px var(--blue);
+				border: solid 1px var(--dark-blue);
 
 				&:hover {
 					background: transparent;
-					border: solid 1px var(--blue);
-					color: var(--blue);
+					border: solid 1px var(--dark-blue);
+					color: var(--white);
 				}
 			}
 
 			&:hover {
-				background: var(--blue);
+				background: var(--dark-blue);
 				color: var(--white);
 			}
 		}
