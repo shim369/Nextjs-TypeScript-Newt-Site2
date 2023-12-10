@@ -19,7 +19,7 @@ export const aboutData = [
     id: "a02",
     title: "MISSION",
     image: "/2.webp",
-    text: 'My mission is to deeply understand the clients\' businesses and leverage advanced technology to produce tangible results. I value walking alongside our clients as true partners in the pursuit of business success, rather than being just developers.'
+    text: 'My mission is to deeply understand the clients\' businesses and leverage advanced technology to produce tangible results. I value walking alongside my clients as true partners in the pursuit of business success, rather than being just developers.'
   },
   {
     id: "a03",

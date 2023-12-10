@@ -14,7 +14,7 @@ export default async function Page() {
     <section id="blog">
       <UnderInner title={metadata.title as string} />
       <div className={styles.containerInner}>
-        <p className={styles.underRead}>On our blog, I regularly update the latest industry trends, technical tutorials, and up-to-date information. <br />If you have any questions or inquiries, please feel free to contact us through our contact page.</p>
+        <p className={styles.underRead}>On my blog, I regularly update the latest industry trends, technical tutorials, and up-to-date information. <br />If you have any questions or inquiries, please feel free to contact us through my contact page.</p>
 
         <ul className={styles.flexBlog}>
           {articles.map((article) => {
