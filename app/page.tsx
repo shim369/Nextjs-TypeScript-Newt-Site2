@@ -133,7 +133,7 @@ export default function Home() {
       <section id="slideVisual" className={styles.slideVisual} ref={slideVisualRef}>
         <div id="slideVisualInner" className={styles.slideVisualInner}>
           <SlideBox />
-          <h3 className={styles.slideText} ref={slideTextRef}>Would you like to try <br className={styles.spBr} />the latest technology?</h3>
+          <h3 className={styles.slideText} ref={slideTextRef}>Would you like to try <br />the latest technology?</h3>
         </div>
       </section>
       <section id="contact" className={styles.contact} ref={contactRef}>
