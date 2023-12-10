@@ -3,7 +3,9 @@ export interface Article {
 	title: string
 	slug: string
 	body: string
-	coverImage: HTMLImageElement
+	coverImage: {
+		src: string;
+	};
 	category: {
 		name: string
 	}
