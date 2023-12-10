@@ -119,10 +119,10 @@ export default function Home() {
           loop
           muted
           autoPlay
+          playsInline
           poster="/poster.webp"
         >
           <source src="/video.mp4" type="video/mp4" />
-          <source src="/video.webm" type="video/webm" />
         </video>
       </section>
       <section id="service">
