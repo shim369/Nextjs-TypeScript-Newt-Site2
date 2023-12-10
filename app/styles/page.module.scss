@@ -66,6 +66,7 @@
 			}
 
 			&:hover {
+				transition: all 0.3s ease;
 				background: #666;
 				color: var(--white);
 			}
@@ -81,10 +82,14 @@
 		li {
 			margin-top: 1rem;
 			text-align: center;
+			&:hover {
+				transition: all 0.3s ease;
+				opacity: .8;
 		}
 
 		i {
 			font-size: 1.3rem;
+			}
 		}
 	}
 }
