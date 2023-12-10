@@ -1,5 +1,3 @@
-// import 'server-only'
-import { cache } from 'react'
 import { createClient } from 'newt-client-js'
 import type { Article } from '../types/article'
 
