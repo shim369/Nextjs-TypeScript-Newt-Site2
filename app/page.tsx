@@ -20,9 +20,6 @@ export default function Home() {
   const leftDivRef = useRef<HTMLDivElement>(null);
   const rightDivRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
-  const video_mp4 = '/video.mp4';
-  const video_webm = '/video.webm';
-
 
   useEffect(() => {
     const topLeftInner = topLeftInnerRef.current;
@@ -69,7 +66,7 @@ export default function Home() {
     const videoContainer = videoContainerRef.current;
     const leftDiv = leftDivRef.current;
     const rightDiv = rightDivRef.current;
-
+  
     Gsap.to(videoRef.current, {
       scrollTrigger: {
         trigger: videoContainer,
@@ -81,8 +78,7 @@ export default function Home() {
         },
       },
     });
-    videoRef.current?.play();
-  }, [videoRef]);
+  }, [videoRef]);  
 
   useEffect(() => {
     const contact = contactRef.current;
@@ -122,10 +118,11 @@ export default function Home() {
           ref={videoRef}
           loop
           muted
+          autoPlay
           poster="/poster.webp"
         >
-          <source src={video_mp4} type="video/mp4" />
-          <source src={video_webm} type="video/webm" />
+          <source src="/video.mp4" type="video/mp4" />
+          <source src="/video.webm" type="video/webm" />
         </video>
       </section>
       <section id="service">
