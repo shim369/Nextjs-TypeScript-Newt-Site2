@@ -1244,14 +1244,6 @@
 	align-items: center;
 	justify-content: center;
 
-	.videoDiv {
-		position: relative;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0, 0, 0, 1);
-		z-index: 3;
-	}
-
 	.video {
 		position: absolute;
 		top: 0;

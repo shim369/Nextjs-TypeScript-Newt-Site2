@@ -14,7 +14,6 @@ export default function Home() {
   const topLeftInnerRef = useRef<HTMLDivElement>(null);
   const topRightRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const videoDivRef = useRef<HTMLDivElement>(null);
   const videoTextRef = useRef<HTMLHeadingElement>(null);
   const videoContainerRef = useRef<HTMLDivElement>(null);
   const contentsBoxRef = useRef<HTMLDivElement>(null);
@@ -30,9 +29,27 @@ export default function Home() {
 
     const TL = Gsap.timeline();
 
-    TL.to(topLeftInner, { y: '0%', autoAlpha: 1, duration: 0.5, delay: 0.3, ease: 'power4.out' });
+    TL.to(topLeftInner, { y: '0px', autoAlpha: 1, duration: 0.5, delay: 0.3, ease: 'power4.out' });
     TL.to(topRight, { autoAlpha: 1, duration: 1, delay: 0.3, ease: 'power4.out' }, '-=0.3');
-  })
+  });
+
+  useEffect(() => {
+    const videoContainer = videoContainerRef.current;
+    const videoText = videoTextRef.current;
+    Gsap.set(videoContainer, { y: '30px', autoAlpha: 0 });
+
+    Gsap.to(videoRef.current, {
+      scrollTrigger: {
+        trigger: videoContainer,
+        start: 'top center',
+        end: 'bottom center',
+        onEnter: () => {
+          Gsap.to(videoContainer, { y: '0px', autoAlpha: 1, duration: 0.5 });
+          Gsap.to(videoText, { autoAlpha: 1, delay: 0.5, duration: 0.5, ease: 'power4.out' });
+        },
+      },
+    });
+  }, [videoRef]);
 
   useEffect(() => {
     const contentsBox = contentsBoxRef.current;
@@ -66,24 +83,6 @@ export default function Home() {
   });
 
   useEffect(() => {
-    const videoContainer = videoContainerRef.current;
-    const videoDiv = videoDivRef.current;
-    const videoText = videoTextRef.current;
-
-    Gsap.to(videoRef.current, {
-      scrollTrigger: {
-        trigger: videoContainer,
-        start: 'top center',
-        end: 'bottom center',
-        onEnter: () => {
-          Gsap.to(videoDiv, { autoAlpha: 0, duration: 0.3 });
-          Gsap.to(videoText, { autoAlpha: 1, delay: 0.5, duration: 0.5, ease: 'power4.out' });
-        },
-      },
-    });
-  }, [videoRef]);
-
-  useEffect(() => {
     const contact = contactRef.current;
     Gsap.set(contact, { y: '30px', autoAlpha: 0 });
 
@@ -111,7 +110,6 @@ export default function Home() {
         </div>
       </section>
       <section id="videoContainer" className={styles.videoContainer} ref={videoContainerRef}>
-        <div className={styles.videoDiv} ref={videoDivRef}></div>
         <h2 className={styles.videoText} ref={videoTextRef}>
           Increasing Business Velocity <br />through Technology
         </h2>
