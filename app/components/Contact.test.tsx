@@ -1,21 +1,30 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import { Contact, validateEmail } from './Contact';
+import "@testing-library/jest-dom";
 
 const push = jest.fn();
 jest.mock('next/navigation', () => {
-    const router = jest.requireActual('next/navigation');
-    return {
-        ...router,
-        useRouter: () => {
-            return {
-                push,
-            };
-        },
-    };
+  const router = jest.requireActual('next/navigation');
+  return {
+    ...router,
+    useRouter: () => {
+      return {
+        push,
+      };
+    },
+  };
 });
 
 describe('Test Contact Component', () => {
+  test('renders Contact component', () => {
+    render(<Contact />);
+
+    expect(screen.getByText(/Name*/i)).toBeInTheDocument();
+    expect(screen.getByText(/Email*/i)).toBeInTheDocument();
+    expect(screen.getByText(/Message*/i)).toBeInTheDocument();
+    expect(screen.getByText(/Submit/i)).toBeInTheDocument();
+  });
   test('should fail on email validation', () => {
     const { getByLabelText } = render(<Contact />);
 
