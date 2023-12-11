@@ -1,6 +1,6 @@
 :root {
 	--white: #fff;
-	--blue: rgb(3, 135, 162);
+	--blue: #0387a2;
 	--dark-blue: #0d4354;
 	--black: #030305;
 }
@@ -31,7 +31,7 @@ body {
 	overflow-x: hidden;
 	font-size: 16px;
 	background: var(--black);
-	font-family: 'Tulpen One', cursive;
+	font-family: 'Tulpen One';
 }
 
 html {
