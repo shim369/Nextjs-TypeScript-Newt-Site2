@@ -101,7 +101,7 @@ export default function Home() {
       <section className={styles.topVisual}>
         <div className={styles.topLeft}>
           <div id="topLeftInner" className={styles.topLeftInner} ref={topLeftInnerRef}>
-            <a href="/" className={styles.logo}>Web Development</a>
+            <span className={styles.logo}>Web Development</span>
             <p>Welcome to NEXT TECH.<br />Your gateway to cutting-edge tech solutions.</p>
           </div>
         </div>
